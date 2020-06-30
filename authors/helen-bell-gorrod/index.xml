@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Helen Bell-Gorrod | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/helen-bell-gorrod/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/helen-bell-gorrod/index.xml" rel="self" type="application/rss+xml" />
+    <description>Helen Bell-Gorrod</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Helen Bell-Gorrod</title>
+      <link>https://MichaelSchomaker.github.io/authors/helen-bell-gorrod/</link>
+    </image>
+    
+    <item>
+      <title>The impact of delayed switch to second-line antiretroviral therapy on mortality, depending on failure time definition and CD4 count at failure</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-01-01_the_impact_of_delaye/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-01-01_the_impact_of_delaye/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
