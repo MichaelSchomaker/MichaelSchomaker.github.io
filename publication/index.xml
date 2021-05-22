@@ -29,9 +29,10 @@ The advantage of using such an approach is that with LTMLE data-adaptive estimat
 techniques which require the commitment to parametric assumptions, such as inverse probability of treatment weighting.&lt;/p&gt;
 &lt;p&gt;While certainly challenging, our paper shows that even for complex macroeconomic questions, it is possible to develop a causal model and implement modern doubly robust longitudinal effect estimators. As with many questions in economics and 
 the social sciences, one has to consider the possibility that some structural assumptions are incorrect. In our paper, we use both a purely data-adaptive approach as well as an approach motivated by economic theory to evaluate whether 
-different, but meaningful, structural assumptions would lead to different estimates. Our main analysis (based on the developed DAG) suggests that if a country had legislated CBI
-for every year between 1998 and 2008, it would have had an average increase in inflation of 0.01 (95% confidence interval (CI): -1.48; 1.50) percentage points in 2010. 
-The other two approaches, both of which make less structural assumptions, led to the following results: -0.40 (95% CI: -2.38; 1.59) and 0.01(95% CI: -1.46; 1.47).&lt;/p&gt;
+different, but meaningful, structural assumptions would lead to different estimates. 
+Our main analysis (based on the developed DAG) suggests that if a country had legislated CBI for every year between 1998 and 2008, 
+it would have had an average increase in inflation of 0.01 (95% confidence interval (CI): -1.48; 1.50) percentage points in 2010. 
+The other two approaches, both of which make less structural assumptions, led to slightly different results: -0.44 (95% CI: -2.38; 1.59) and 0.01 (95% CI: -1.46; 1.47).&lt;/p&gt;
 &lt;p&gt;From a monetary policy point of view, we could thus conclude  that there is no strong support for the hypothesis that an independent central bank necessarily lowers inflation.&lt;/p&gt;
 &lt;p&gt;In summary: causal inference in economics, using directed acyclic graphs and modern doubly robust estimation strategies is challenging, but possible and certainly rewarding!&lt;/p&gt;
 </description>
