@@ -30,16 +30,16 @@
 &lt;h4 id=&#34;model-averaging&#34;&gt;Model Averaging&lt;/h4&gt;
 &lt;p&gt;The motivation for variable selection in regression models is based on the rationale that associational relationships between variables are best understood by reducing the model&amp;rsquo;s dimension. 
 The problem with this approach is that (i) regression parameters after model selection are often biased and (ii) the respective standard errors are too small because they do not reflect the uncertainty 
-related to the model selection process. It has been proposed  that the drawback of model selection can be overcome by model averaging. With model averaging, one calculates a weighted average $\hat{\bar{\beta}} = \sum_{\kappa} w_{\kappa} \hat{\beta}_{\kappa}$ from the $k$ parameter estimates $\hat{\beta}_{\kappa}$ ($\kappa=1,\ldots,k$) of a set of candidate (regression) models $\mathcal{M}={M_1,\ldots,M_k}$, where the weights are calculated in a way such that `better&#39; models receive a higher weight. A popular weight choice would be based on the exponential AIC,
+related to the model selection process. It has been proposed  that the drawback of model selection can be overcome by model averaging. With model averaging, one calculates a weighted average $\hat{\bar{\beta}} = \sum_{\kappa} w_{\kappa} \hat{\beta}&lt;em&gt;{\kappa}$ from the $k$ parameter estimates $\hat{\beta}&lt;/em&gt;{\kappa}$ ($\kappa=1,\ldots,k$) of a set of candidate (regression) models $\mathcal{M}={M_1,\ldots,M_k}$, where the weights are calculated in a way such that `better&#39; models receive a higher weight. A popular weight choice would be based on the exponential AIC,
 \begin{eqnarray}
 w_{\kappa}^{\text{AIC}} &amp;amp;=&amp;amp; \frac{\exp(-\frac{1}{2} \mathrm{AIC_{\kappa})}}{\sum_{\kappa=1}^k\exp(-\frac{1}{2} \mathrm{AIC_{\kappa})}} ,
 \end{eqnarray}
 where $\mathrm{AIC_{\kappa}}$ is the AIC value related to model $M_{\kappa}\in\mathcal{M}$ and $\sum_{\kappa} w_{\kappa}^{\text{AIC}} =1$. It has been suggested
-to estimate the variance of the scalar $\hat{\bar{\beta}}_j \in \hat{\bar{{\beta}}}$ via
+to estimate the variance of the scalar $\hat{\bar{\beta}}&lt;em&gt;j \in \hat{\bar{{\beta}}}$ via
 \begin{eqnarray}
-\widehat{\text{Var}}(\hat{\bar{\beta}}_j)&amp;amp;=&amp;amp; {\sum_{\kappa=1}^k w_{\kappa} \sqrt{\widehat{\text{Var}}(\hat{\beta}_{j,\kappa}|M_{\kappa}) + (\hat{\beta}_{j,\kappa}-\hat{\bar{\beta}}_j})^2}^2 ,
+\widehat{\text{Var}}(\hat{\bar{\beta}}&lt;em&gt;j)&amp;amp;=&amp;amp; {\sum&lt;/em&gt;{\kappa=1}^k w&lt;/em&gt;{\kappa} \sqrt{\widehat{\text{Var}}(\hat{\beta}&lt;em&gt;{j,\kappa}|M&lt;/em&gt;{\kappa}) + (\hat{\beta}_{j,\kappa}-\hat{\bar{\beta}}&lt;em&gt;j})^2}^2 ,
 \end{eqnarray}
-where $\hat{\beta}_{j,\kappa}$ is the j$^{th}$ regression coefficient of the $\kappa^{th}$ candidate model. This approach tackles problem (ii), the incorporation of model selection uncertainty into the standard errors of the regression parameters; but it may not necessarily tackle problem (i) as the regression parameters may still be biased.
+where $\hat{\beta}&lt;/em&gt;{j,\kappa}$ is the j$^{th}$ regression coefficient of the $\kappa^{th}$ candidate model. This approach tackles problem (ii), the incorporation of model selection uncertainty into the standard errors of the regression parameters; but it may not necessarily tackle problem (i) as the regression parameters may still be biased.
 There are multiple different suggestions on how the weights can be calculated, and those implemented in &amp;ldquo;MAMI&amp;rdquo; are explained in the &lt;a href=&#34;https://MichaelSchomaker.github.io/pdf/MAMI_manual.pdf&#34; target=&#34;_blank&#34;&gt;manual&lt;/a&gt;.
 Note that model selection can be viewed as a special case of model averaging where the ``best&#39;&#39; model receives weight $1$ (and all others a weight of $0$). All implemented model selection options are listed in the  &lt;a href=&#34;https://MichaelSchomaker.github.io/pdf/MAMI_manual.pdf&#34; target=&#34;_blank&#34;&gt;manual&lt;/a&gt; too.&lt;/p&gt;
 &lt;h4 id=&#34;multiple-imputation&#34;&gt;Multiple Imputation&lt;/h4&gt;

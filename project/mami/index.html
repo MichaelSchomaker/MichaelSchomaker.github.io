@@ -38,7 +38,7 @@
   
   
   
-  <meta name="theme-color" content="#207833">
+  <meta name="theme-color" content="#7a2740">
   
 
   
@@ -653,16 +653,16 @@
 <h4 id="model-averaging">Model Averaging</h4>
 <p>The motivation for variable selection in regression models is based on the rationale that associational relationships between variables are best understood by reducing the model&rsquo;s dimension. 
 The problem with this approach is that (i) regression parameters after model selection are often biased and (ii) the respective standard errors are too small because they do not reflect the uncertainty 
-related to the model selection process. It has been proposed  that the drawback of model selection can be overcome by model averaging. With model averaging, one calculates a weighted average $\hat{\bar{\beta}} = \sum_{\kappa} w_{\kappa} \hat{\beta}_{\kappa}$ from the $k$ parameter estimates $\hat{\beta}_{\kappa}$ ($\kappa=1,\ldots,k$) of a set of candidate (regression) models $\mathcal{M}={M_1,\ldots,M_k}$, where the weights are calculated in a way such that `better' models receive a higher weight. A popular weight choice would be based on the exponential AIC,
+related to the model selection process. It has been proposed  that the drawback of model selection can be overcome by model averaging. With model averaging, one calculates a weighted average $\hat{\bar{\beta}} = \sum_{\kappa} w_{\kappa} \hat{\beta}<em>{\kappa}$ from the $k$ parameter estimates $\hat{\beta}</em>{\kappa}$ ($\kappa=1,\ldots,k$) of a set of candidate (regression) models $\mathcal{M}={M_1,\ldots,M_k}$, where the weights are calculated in a way such that `better' models receive a higher weight. A popular weight choice would be based on the exponential AIC,
 \begin{eqnarray}
 w_{\kappa}^{\text{AIC}} &amp;=&amp; \frac{\exp(-\frac{1}{2} \mathrm{AIC_{\kappa})}}{\sum_{\kappa=1}^k\exp(-\frac{1}{2} \mathrm{AIC_{\kappa})}} ,
 \end{eqnarray}
 where $\mathrm{AIC_{\kappa}}$ is the AIC value related to model $M_{\kappa}\in\mathcal{M}$ and $\sum_{\kappa} w_{\kappa}^{\text{AIC}} =1$. It has been suggested
-to estimate the variance of the scalar $\hat{\bar{\beta}}_j \in \hat{\bar{{\beta}}}$ via
+to estimate the variance of the scalar $\hat{\bar{\beta}}<em>j \in \hat{\bar{{\beta}}}$ via
 \begin{eqnarray}
-\widehat{\text{Var}}(\hat{\bar{\beta}}_j)&amp;=&amp; {\sum_{\kappa=1}^k w_{\kappa} \sqrt{\widehat{\text{Var}}(\hat{\beta}_{j,\kappa}|M_{\kappa}) + (\hat{\beta}_{j,\kappa}-\hat{\bar{\beta}}_j})^2}^2 ,
+\widehat{\text{Var}}(\hat{\bar{\beta}}<em>j)&amp;=&amp; {\sum</em>{\kappa=1}^k w</em>{\kappa} \sqrt{\widehat{\text{Var}}(\hat{\beta}<em>{j,\kappa}|M</em>{\kappa}) + (\hat{\beta}_{j,\kappa}-\hat{\bar{\beta}}<em>j})^2}^2 ,
 \end{eqnarray}
-where $\hat{\beta}_{j,\kappa}$ is the j$^{th}$ regression coefficient of the $\kappa^{th}$ candidate model. This approach tackles problem (ii), the incorporation of model selection uncertainty into the standard errors of the regression parameters; but it may not necessarily tackle problem (i) as the regression parameters may still be biased.
+where $\hat{\beta}</em>{j,\kappa}$ is the j$^{th}$ regression coefficient of the $\kappa^{th}$ candidate model. This approach tackles problem (ii), the incorporation of model selection uncertainty into the standard errors of the regression parameters; but it may not necessarily tackle problem (i) as the regression parameters may still be biased.
 There are multiple different suggestions on how the weights can be calculated, and those implemented in &ldquo;MAMI&rdquo; are explained in the <a href="/pdf/MAMI_manual.pdf" target="_blank">manual</a>.
 Note that model selection can be viewed as a special case of model averaging where the ``best'' model receives weight $1$ (and all others a weight of $0$). All implemented model selection options are listed in the  <a href="/pdf/MAMI_manual.pdf" target="_blank">manual</a> too.</p>
 <h4 id="multiple-imputation">Multiple Imputation</h4>
