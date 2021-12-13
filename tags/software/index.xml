@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/tags/software/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <description>software</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>software</title>
+      <link>https://MichaelSchomaker.github.io/tags/software/</link>
+    </image>
+    
+    <item>
+      <title>MAMI</title>
+      <link>https://MichaelSchomaker.github.io/project/mami/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/project/mami/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;MAMI - An  
+  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; package for Model Averaging (and Model Selection) after Multiple Imputation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#Background&#34;&gt;$\rightarrow$ Background&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#Software&#34;&gt;$\rightarrow$ Software&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#other&#34;&gt;$\rightarrow$ Further considerations and literature&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;Background&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
+&lt;h4 id=&#34;model-averaging&#34;&gt;Model Averaging&lt;/h4&gt;
+&lt;p&gt;The motivation for variable selection in regression models is based on the rationale that associational relationships between variables are best understood by reducing the model&amp;rsquo;s dimension. 
+The problem with this approach is that (i) regression parameters after model selection are often biased and (ii) the respective standard errors are too small because they do not reflect the uncertainty 
+related to the model selection process. It has been proposed  that the drawback of model selection can be overcome by model averaging. With model averaging, one calculates a weighted average $\hat{\bar{\beta}} = \sum_{\kappa} w_{\kappa} \hat{\beta}_{\kappa}$ from the $k$ parameter estimates $\hat{\beta}_{\kappa}$ ($\kappa=1,\ldots,k$) of a set of candidate (regression) models $\mathcal{M}={M_1,\ldots,M_k}$, where the weights are calculated in a way such that `better&#39; models receive a higher weight. A popular weight choice would be based on the exponential AIC,
+\begin{eqnarray}
+w_{\kappa}^{\text{AIC}} &amp;amp;=&amp;amp; \frac{\exp(-\frac{1}{2} \mathrm{AIC_{\kappa})}}{\sum_{\kappa=1}^k\exp(-\frac{1}{2} \mathrm{AIC_{\kappa})}} ,
+\end{eqnarray}
+where $\mathrm{AIC_{\kappa}}$ is the AIC value related to model $M_{\kappa}\in\mathcal{M}$ and $\sum_{\kappa} w_{\kappa}^{\text{AIC}} =1$. It has been suggested
+to estimate the variance of the scalar $\hat{\bar{\beta}}_j \in \hat{\bar{{\beta}}}$ via
+\begin{eqnarray}
+\widehat{\text{Var}}(\hat{\bar{\beta}}_j)&amp;amp;=&amp;amp; {\sum_{\kappa=1}^k w_{\kappa} \sqrt{\widehat{\text{Var}}(\hat{\beta}_{j,\kappa}|M_{\kappa}) + (\hat{\beta}_{j,\kappa}-\hat{\bar{\beta}}_j})^2}^2 ,
+\end{eqnarray}
+where $\hat{\beta}_{j,\kappa}$ is the j$^{th}$ regression coefficient of the $\kappa^{th}$ candidate model. This approach tackles problem (ii), the incorporation of model selection uncertainty into the standard errors of the regression parameters; but it may not necessarily tackle problem (i) as the regression parameters may still be biased.
+There are multiple different suggestions on how the weights can be calculated, and those implemented in &amp;ldquo;MAMI&amp;rdquo; are explained in the &lt;a href=&#34;https://MichaelSchomaker.github.io/pdf/MAMI_manual.pdf&#34; target=&#34;_blank&#34;&gt;manual&lt;/a&gt;.
+Note that model selection can be viewed as a special case of model averaging where the ``best&#39;&#39; model receives weight $1$ (and all others a weight of $0$). All implemented model selection options are listed in the  &lt;a href=&#34;https://MichaelSchomaker.github.io/pdf/MAMI_manual.pdf&#34; target=&#34;_blank&#34;&gt;manual&lt;/a&gt; too.&lt;/p&gt;
+&lt;h4 id=&#34;multiple-imputation&#34;&gt;Multiple Imputation&lt;/h4&gt;
+&lt;p&gt;Multiple imputation (MI) is a popular method to address missing data. Based on assumptions about the data distribution (and the mechanism which gives rise to the missing data) missing values can be 
+imputed by means of draws from the posterior predictive distribution of the unobserved data given the observed data. This procedure is repeated to create $M$ imputed data sets, the (regression) 
+analysis is then conducted on each of these data sets and the $M$ results ($M$ point and $M$ variance estimates) are combined by a set of simple rules:&lt;/p&gt;
+&lt;p&gt;\begin{eqnarray}
+\hat{\beta}_{\text{MI}} &amp;amp;=&amp;amp;  \frac{1}{M} \sum_{m=1}^M \hat{\beta}^{(m)}
+\end{eqnarray}&lt;/p&gt;
+&lt;p&gt;and
+\begin{eqnarray}
+\widehat{{\text{Cov}}}(\hat{\beta}_{\text{MI}}) &amp;amp;=&amp;amp; \frac{1}{M} \sum_{m=1}^{M} \widehat{\text{Cov}}(\hat{\beta}^{(m)}) + \frac{M+1}{M(M-1)} \sum_{m=1}^{M} (\hat{\beta}^{(m)}-\hat{\beta}_{\text{MI}}) (\hat{\beta}^{(m)}-\hat{\beta}_{\text{MI}})^{&#39;}
+\end{eqnarray}&lt;/p&gt;
+&lt;p&gt;where $ \hat{\beta}^{(m)}$ refers to the estimate of $\beta$ in the $\text{m}^{th}$ imputed set of data. Confidence intervals are based on a particular $t$-distribution.&lt;/p&gt;
+&lt;h4 id=&#34;model-averaging-or-model-selection-after-multiple-imputation&#34;&gt;Model Averaging (or Model Selection) after Multiple Imputation&lt;/h4&gt;
+&lt;p&gt;How can model averaging and model selection be applied to multiply imputed data? The detailed motivation can be found in the 2014 reference 
+&lt;a href=&#34;#bottom&#34;&gt;below&lt;/a&gt;. The basic results for model &lt;em&gt;averaging&lt;/em&gt; are
+\begin{eqnarray}
+\hat{\bar{\beta}}_{\text{MI}} &amp;amp;=&amp;amp; \frac{1}{M} \sum_{m=1}^{M} \hat{\bar{\beta}}^{(m)}\quad \text{with} \quad \hat{\bar{{\beta}}}^{(m)} = \sum_{\kappa=1}^{k} w_{\kappa}^{(m)} \hat{{\beta}}_{\kappa}^{(m)}
+\end{eqnarray}
+and applies to any weight choice. If the variance of the model averaging estimator is estimated via the formula given above, the overall variance of the estimator after multiple imputation relates to
+\begin{eqnarray}
+\widehat{\text{Var}}(\hat{\bar{\beta}}_{j,\text{MI}}) &amp;amp;=&amp;amp; \frac{1}{M} \sum_{m=1}^{M}  {\sum_{\kappa=1}^k w_{\kappa} \sqrt{\widehat{\text{Var}}(\hat{\beta}_{j,\kappa}^{(m)})+(\hat{\beta}_{j,\kappa}^{(m)}-\hat{\bar{\beta}}_j^{(m)})^2} }^2  + \newline 
+&amp;amp;&amp;amp;\frac{M+1}{M(M-1)} \sum_{m=1}^{M} (\hat{\bar\beta}_j^{(m)}-\hat{\bar\beta}_{j,\text{MI}})^2 .
+\end{eqnarray}
+Confidence intervals could then again be estimated based on a $t$ distribution (as explained above) or, alternatively, via bootsrapping (see 2014 reference 
+&lt;a href=&#34;#bottom&#34;&gt;below&lt;/a&gt;, and 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/publication/2018-01-01_bootstrap_inference_/&#34;&gt;this&lt;/a&gt; publication of mine for a general Bootstrap-MI framework).&lt;/p&gt;
+&lt;p&gt;Model &lt;em&gt;selection&lt;/em&gt; after imputation works essentially the same, except that parameters associated with variables which have not been selected are assumed to be $0$. With this assumption, a variable will be formally selected 
+if it is selected in at least one imputed set of data, but its overall impact will depend on how often it is chosen. Here, confidence intervals will almost always be too narrow if 
+the formula from above will be applied (because of model selection uncertainty) and bootstrapping is strongly recommended.&lt;/p&gt;
+&lt;p&gt;As a consequence for model selection (and model averaging), effects of variables which are not supported throughout imputed data sets (and candidate models) will simply be less pronounced.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;Software&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;software&#34;&gt;Software&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;MAMI&lt;/em&gt; estimates the point estimates as explained above, together with confidence intervals that are either based on the formula above, or a Bayesian variation thereof, or bootstrapping (preferred option).&lt;/p&gt;
+&lt;p&gt;In addition, a variable importance measure (averaged over the $M$ imputed data sets) will be calculated: this measure simply sums up the weights $w_{\kappa}$ of those candidate models $M_{\kappa}$ that contain the relevant variable,
+and lies between $0$ (unimportant) and $1$ (very important). It is similar to the Bayesian posterior effect probability. Results can be interpreted and reported as suggested in the &lt;a href=&#34;https://MichaelSchomaker.github.io/pdf/MAMI_manual.pdf&#34; target=&#34;_blank&#34;&gt;manual&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;MAMI&lt;/em&gt;&amp;rsquo;s main function is &lt;em&gt;mami()&lt;/em&gt;. It is recommended to get familiar with the function&amp;rsquo;s syntax by typing &lt;em&gt;?mami&lt;/em&gt;, running the examples at the bottom of the help page and read through the manual.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The package can be downloaded 
+&lt;a href=&#34;http://mami.r-forge.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Install it via&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;install.packages(&amp;quot;MAMI&amp;quot;, 
+	repos=c(&amp;quot;http://R-Forge.R-project.org&amp;quot;,&amp;quot;http://cran.at.r-project.org&amp;quot;),
+	dependencies=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;The manual can be found &lt;a href=&#34;https://MichaelSchomaker.github.io/pdf/MAMI_manual.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The package provides access to less frequently used model averaging techniques, offers integrated bootstrap estimation and easy-to-use parallelization.&lt;/li&gt;
+&lt;li&gt;Optimal model averaging procedures are implemented too, and wrappers for their use in &lt;em&gt;super learning&lt;/em&gt; are integrated into the package. See also 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/project/sae/&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&#34;other&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;further-considerations&#34;&gt;Further considerations&lt;/h3&gt;
+&lt;p&gt;Interpretation of regression parameters requires care: for any explanatory interpretation causal considerations need to be taken into account (see my paper on regression and causailty 
+
+&lt;a href=&#34;https://MichaelSchomaker.github.io/publication/2020-06-25_regression_causality/&#34;&gt;here&lt;/a&gt; ). However, both model averaging and post model selection estimators are biased; thus, in most cases a causal interpretations are invalid. 
+Even when confidence interval coverage is improved, as explained above, it does not change the fact that in many cases model averaging and model selection estimators are more suitable for predictive tasks. 
+Modern doubly robust etimators, such as targeted maximum likelihood estimators, can integrate data-adaptive approaches which are based on predictive considerations, while still retaining valid inference. Therefore,
+the integration of model averaging estimators in machine learning approaches which are used for causal effect estimation can be attractive as explained in 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/publication/2019-01-01_when_and_when_not_to/&#34;&gt;this&lt;/a&gt;
+recent paper of mine. &lt;em&gt;MAMI&lt;/em&gt; offers a couple of wrappers that can be used to integrate different model averaging approaches into super learning, a data-adaptive approach which uses a weighted combination of different learning algorithms
+and is popular in causal inference. See Section 6.3. of the &lt;a href=&#34;https://MichaelSchomaker.github.io/pdf/MAMI_manual.pdf&#34; target=&#34;_blank&#34;&gt;manual&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;bottom&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CICI</title>
+      <link>https://MichaelSchomaker.github.io/project/cici/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/project/cici/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;CICI&lt;/strong&gt; is a new 
+  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; package. Details about it are going to be announced soon.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SAE</title>
+      <link>https://MichaelSchomaker.github.io/project/sae/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/project/sae/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;SAE - Shrinkage Averaging Estimation: some useful functions and an 
+  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; package&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#Background&#34;&gt;$\rightarrow$ Background&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#Software&#34;&gt;$\rightarrow$ Software&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#other&#34;&gt;$\rightarrow$ Further considerations and literature&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;Background&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
+&lt;p&gt;It is now well-known that estimators post-model selection are typically both biased and overoptimistic in the sense that the uncertainty associated with the model selection process is typically not reflected
+in confidence intervals. This is because the selected model is &lt;em&gt;conditional&lt;/em&gt; on the selection process; a different dataset, or a different selection method, may yield different conclusions.&lt;/p&gt;
+&lt;p&gt;For many shrinkage estimators, the choice of one or many tuning parameters is required. Again, inference is conditional on the chosen tuning parameter. With model averaging, different &amp;ldquo;good&amp;rdquo; models are combined and the 
+idea of shrinkage averaging estimation is to combine estimates resulting from different tuning parameter choices. Based on ideas from the optimal model averaging literature, one can think of clever combinations such that a cross-validation error is minimized. 
+My 2012 paper explains the basic idea (see 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/publication/2012-01-01_shrinkage_averaging_/&#34;&gt;here&lt;/a&gt;), but our 2019 paper contains (see 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/publication/2019-01-01_when_and_when_not_to/&#34;&gt;here&lt;/a&gt;)
+some more mature thoughts. These ideas are implemented in both my &lt;em&gt;SAE&lt;/em&gt; package as well as the &lt;em&gt;lae()&lt;/em&gt; function contained in my &lt;em&gt;MAMI&lt;/em&gt; package (see 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/project/mami/&#34;&gt;here&lt;/a&gt;). More details are given below.&lt;/p&gt;
+&lt;h4 id=&#34;lasso-averaging-estimation&#34;&gt;LASSO averaging estimation&lt;/h4&gt;
+&lt;p&gt;Consider the LASSO estimator for a simple linear model:
+\begin{eqnarray}
+\hat{\beta}_{\text{LE}}({\lambda}) &amp;amp;=&amp;amp; \text{arg} \min {\sum_{i=1}^n (y_i - \beta_0 - \sum_{j=1}^p x_{ij}{{\beta}}_j)^2 + {\lambda} \sum_{j=1}^p |\beta_j| },.
+\end{eqnarray}
+The complexity parameter $\lambda \geq 0$ tunes the amount of shrinkage and is typically estimated via the generalized cross validation criterion (GCV) or any other cross validation criterion (CV). The larger the value of $\lambda$, the greater the amount of shrinkage since the estimated coefficients are shrunk towards zero.&lt;/p&gt;
+&lt;p&gt;Consider a sequence of candidate tuning parameters $\boldsymbol{\lambda}={\lambda_1,\ldots,\lambda_L}$. 
+If each estimator $\hat{\beta}_{\text{LE}}({\lambda_i})$ obtains a specific weight $w_{\lambda_i}$, then a &lt;em&gt;LASSO averaging estimator&lt;/em&gt; takes the form
+\begin{eqnarray}
+\hat{\bar{\beta}}_{\text{LAE}}&amp;amp;=&amp;amp; \sum_{i=1}^L w_{\lambda_i} \hat{\beta}_{\text{LE}}({\lambda_i}) = \mathbf{w}_\lambda \hat{\boldsymbol{B}}_{\text{LE}}  ,
+\end{eqnarray}
+where $\lambda_i \in [0,c]$, $c&amp;gt;0$ is a suitable constant, $\hat{{\boldsymbol{B}}}_{\text{LE}}=(\hat{\beta}_{\text{LE}}(\lambda_1),\ldots,\hat{\beta}_{\text{LE}}(\lambda_L))&#39;$ is the 
+$L \times p$ matrix of the LASSO estimators, $\mathbf{w}_\lambda=(w_{\lambda_1},\ldots,w_{\lambda_L})$ is an $1 \times L$ weight vector, $\mathbf{w}_\lambda \in \mathcal{W}$ and $\mathcal{W}={\mathbf{w}_\lambda \in [0,1]^L: \mathbf{1}&#39;\mathbf{w}_\lambda=1}$.&lt;/p&gt;
+&lt;p&gt;One could choose the weights
+\begin{eqnarray}
+\hat{\mathbf{w}}_\lambda^{\text{OCV}} &amp;amp;=&amp;amp; \text{arg} \min_{_{_{\mathbf{w}_\lambda\in\mathcal{W}}}} OCV_k
+\end{eqnarray}
+with
+\begin{eqnarray}
+OCV_k &amp;amp;=&amp;amp; \frac{1}{n}{\tilde{\boldsymbol\epsilon}_\kappa(w)}&#39; \tilde{\boldsymbol\epsilon}_\kappa(w) \nonumber\ &amp;amp;\propto&amp;amp; \mathbf{w}_{\lambda} \mathbf{E}&#39;_k \mathbf{E}_k {\mathbf{w}_{\lambda}}&#39; ,,
+\end{eqnarray}
+referring to an optimal cross validation (OCV) based criterion and $\mathbf{E}_k = (\tilde{\boldsymbol\epsilon}_k(\lambda_1),\ldots,\tilde{\boldsymbol\epsilon}_k(\lambda_L))$ is the $n \times L$ matrix
+of the ($k$-fold) cross-validation residuals for the $L$ competing tuning parameters (given a specific loss function). An optimal weight vector for this criterion is then
+\begin{eqnarray}
+w^{\text{LAE}} &amp;amp;=&amp;amp; \text{arg} \min_{_{_{w\in\mathcal{W}}}} OCV_k .
+\end{eqnarray}
+These weights can be calculated with quadratic programming.&lt;/p&gt;
+&lt;p&gt;Alternatively, the weight choice may not be based on predictive purposes, but on confidence interval coverage and resampling may be an option in this case.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;Software&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;software&#34;&gt;Software&lt;/h3&gt;
+&lt;p&gt;Two implementations are available:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the original files from 2012, summarized in the &lt;ins&gt; &lt;em&gt;SAE&lt;/em&gt; - package &lt;/ins&gt;, available  &lt;a href=&#34;https://MichaelSchomaker.github.io/zip/SAE_package.zip&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;a broader and more efficient implementation in the function &lt;em&gt;lae()&lt;/em&gt; in the 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/project/mami/&#34;&gt;&lt;em&gt;MAMI&lt;/em&gt; package&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Briefly, the new implementation is better and faster and can be used for the linear model, the logistic model and the Poisson model &amp;ndash; but not for longitudinal or survival data. It can be used for Ridge, Elastic Net and Lasso. 
+The original SAE package can only be used for the linear model, but has both the bootstrap weight choice and Random Lasso option implemented (but not the Elastic Net). The use of the new files are encouraged, but the old files may be useful for reproduction
+of results. There are many more options and possibilities, see Section 3.1.3 in the &lt;a href=&#34;https://MichaelSchomaker.github.io/pdf/MAMI_manual.pdf&#34; target=&#34;_blank&#34;&gt; MAMI manual&lt;/a&gt;, or under &lt;em&gt;?sae&lt;/em&gt; in the SAE package.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;other&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;further-considerations&#34;&gt;Further considerations&lt;/h3&gt;
+&lt;p&gt;LASSO averaging is computationally very efficient. It is thus a fast prediction algorithm and suitable for inclusion into &lt;em&gt;super learning&lt;/em&gt;. 
+Super learning means considering a set of prediction algorithms, for example regression models, 
+shrinkage estimators or regression trees. Instead of choosing the algorithm with the smallest cross validation error, super learning chooses a weighted combination of different algorithms, 
+that is the weighted combination which minimizes the cross validation error. It can be shown that this weighted combination will perform at least as good as the best algorithm, if not better.&lt;/p&gt;
+&lt;p&gt;Briefly, &lt;em&gt;MAMI&lt;/em&gt; contains several shrinkage averaging estimation wrappers that can be used for super learning. They are listed and explained when typing&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;listSLWrappers()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is useful for both pure prediction problems and causal inference with targeted maximum likelihood estimation. The below 2019 reference (&amp;ldquo;When and when not to us eoptimal model avergaing&amp;rdquo;) contains more details.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

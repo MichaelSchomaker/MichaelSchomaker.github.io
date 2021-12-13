@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C. Heumann | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/c.-heumann/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/c.-heumann/index.xml" rel="self" type="application/rss+xml" />
+    <description>C. Heumann</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>C. Heumann</title>
+      <link>https://MichaelSchomaker.github.io/authors/c.-heumann/</link>
+    </image>
+    
+    <item>
+      <title>When and when not to use optimal model averaging</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_when_and_when_not_to/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_when_and_when_not_to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bootstrap inference when using multiple imputation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_bootstrap_inference_/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_bootstrap_inference_/</guid>
+      <description>&lt;p&gt;For many analyses, it is common to use both bootstrapping and multiple imputation (MI): MI to address missing data and bootstrapping to obtain standard errors. For example, when using the g-formula in causal inference, bootstrapping is required to 
+obtain standard errors; however, the data may be multiply imputed due to missing (baseline) data in the population of interest. How should bootstrapping and multiple imputation then be combined? First bootstrapping ($B$ times, including missing data) and then impute ($M$ times); or first impute and then bootstrap the multiply 
+imputed data? For the latter approach, one could use bootstrapping to estimate the standard error in each imputed
+data set and apply the standard MI combining rules (&amp;ldquo;Rubin&amp;rsquo;s rules&amp;rdquo;); alternatively, the $B \times M$ estimates could be pooled and 95% confidence
+intervals could be calculated based on the 2.5th and 97.5th percentiles of the respective empirical distribution. For the
+former  approach, either multiple imputation combining rules can be applied to the imputed data of each bootstrap sample
+to obtain $B$ point estimates, which in turn, may be used to construct confidence intervals, or the $B \times M$ estimates of the
+pooled data are used for interval estimation.&lt;/p&gt;
+&lt;p&gt;In our paper, we evaluated the above four approaches and found that three are generally valid whereas one - first imputing, then bootstrapping, and then pooling the estimates - is invalid. We describe the advantages, disadvantages and implications
+of all approaches and give guidance which approach may be suitable in which context. Under the &lt;em&gt;code&lt;/em&gt; tag above, an example on how to implement the four respective approaches is contained as well as code of the simulation studies from the paper.&lt;/p&gt;
+&lt;p&gt;What is nice about this manuscript is not only that it provides practical guidance, but also that it sparked some other interesting research. For instance, Bartlett and Hughes consider the combination of imputation and bootstrapping
+when imputation and analysis models are uncongenial or misspecified (see 
+&lt;a href=&#34;https://arxiv.org/abs/1911.09980&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). Interestingly, they find that bootstrapping, followed by imputation, and not pooling estimates, is the preferred 
+approach in this case. This is in line with our suggested approach on model selection and averaging with multiply imputed data (see 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/project/mami/&#34;&gt;here&lt;/a&gt;). Also, van Hippel and Bartlett proposed an
+alternative, computationally efficient, point estimator and confidence interval when bootstraping followed by MI, which is implemented in an R-package (
+&lt;a href=&#34;https://cran.r-project.org/web/packages/bootImpute/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bootImpute &lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;It is nice to see this work being used and further developed; also after this manuscript got initially rejected by an applied stats journal because a reviewer insisted: &amp;ldquo;There is nothing really new in the paper&amp;rdquo;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Statistics and Data Analysis - With Exercises, Solutions and Applications in R</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_introduction_to_stat/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_introduction_to_stat/</guid>
+      <description>&lt;p&gt;Our introcutory book contains a comprehensive and thorough overview of fundamental statistical concepts such as hypothesis testing, inference and regression; and each
+chapter is accompanied by a wealth of exercises and solutions. Have a look at the edicated 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/book/&#34;&gt;book page&lt;/a&gt; for more details.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mercury and neuromotor function among children in a rural town in Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_mercury_and_neuromot/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_mercury_and_neuromot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simultaneous Treatment of Missing Data and Measurement Error in HIV Research Using Multiple Overimputation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_simultaneous_treatme/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_simultaneous_treatme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Correction: Risk Factors for Mercury Exposure of Children in a Rural Mining Town in Northern Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_correction_risk_fact/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_correction_risk_fact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model selection and model averaging after multiple imputation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_model_selection_and_/</link>
+      <pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_model_selection_and_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Risk factors for mercury exposure of children in a rural mining town in northern Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_risk_factors_for_mer/</link>
+      <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_risk_factors_for_mer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model averaging in factor analysis: an analysis of Olympic decathlon data</title>
+      <link>https://MichaelSchomaker.github.io/publication/2011-01-01_model_averaging_in_f/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2011-01-01_model_averaging_in_f/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Frequentist Model Averaging with missing observations</title>
+      <link>https://MichaelSchomaker.github.io/publication/2010-01-01_frequentist_model_av/</link>
+      <pubDate>Wed, 01 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2010-01-01_frequentist_model_av/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deskriptive Statistik - Eine Einführung in Methoden und Anwendungen mit R und SPSS (in German), 7th extended edition with contributions by Michael Schomaker</title>
+      <link>https://MichaelSchomaker.github.io/publication/2009-01-01_deskriptive_statisti/</link>
+      <pubDate>Wed, 04 Mar 2009 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2009-01-01_deskriptive_statisti/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arbeitsbuch zur deskriptiven und induktiven Statistik (in German)</title>
+      <link>https://MichaelSchomaker.github.io/publication/2009-01-01_arbeitsbuch_zur_desk/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2009-01-01_arbeitsbuch_zur_desk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Induktive Statistik - Eine Einführung mit R und SPSS (in German), 4th extended edition with contributions by Michael Schomaker and Malte Wißmann</title>
+      <link>https://MichaelSchomaker.github.io/publication/2008-01-01_induktive_statistik_/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2008-01-01_induktive_statistik_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear Models and Generalizations - Least Squares and Alternatives, 3rd extended edition with contributions by Michael Schomaker</title>
+      <link>https://MichaelSchomaker.github.io/publication/2008-01-01_linear_models_and_ge/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2008-01-01_linear_models_and_ge/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

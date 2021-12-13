@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>immunology | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/tags/immunology/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/tags/immunology/index.xml" rel="self" type="application/rss+xml" />
+    <description>immunology</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 09 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>immunology</title>
+      <link>https://MichaelSchomaker.github.io/tags/immunology/</link>
+    </image>
+    
+    <item>
+      <title>Schistosomiasis Burden and Its Association With Lower Measles Vaccine Responses in School Children From Rural Cameroon</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_schistosomiasis_burd/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_schistosomiasis_burd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

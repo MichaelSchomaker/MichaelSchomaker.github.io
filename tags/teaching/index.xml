@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>teaching | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/tags/teaching/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <description>teaching</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>teaching</title>
+      <link>https://MichaelSchomaker.github.io/tags/teaching/</link>
+    </image>
+    
+    <item>
+      <title>Paradoxical Collider Effect in the Analysis of Non-Communicable Disease Epidemiological Data: a reproducible illustration and web application</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_paradoxical_collider/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_paradoxical_collider/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effect Modification and Collapsibility in Evaluations of Public Health Interventions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_effect_modification_/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_effect_modification_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Targeted maximum likelihood estimation for a binary treatment: A tutorial</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_targeted_maximum_lik/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_targeted_maximum_lik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to Statistics and Data Analysis - With Exercises, Solutions and Applications in R</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_introduction_to_stat/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_introduction_to_stat/</guid>
+      <description>&lt;p&gt;Our introcutory book contains a comprehensive and thorough overview of fundamental statistical concepts such as hypothesis testing, inference and regression; and each
+chapter is accompanied by a wealth of exercises and solutions. Have a look at the edicated 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/book/&#34;&gt;book page&lt;/a&gt; for more details.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

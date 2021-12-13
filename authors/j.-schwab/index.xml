@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J. Schwab | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/j.-schwab/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/j.-schwab/index.xml" rel="self" type="application/rss+xml" />
+    <description>J. Schwab</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Jun 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>J. Schwab</title>
+      <link>https://MichaelSchomaker.github.io/authors/j.-schwab/</link>
+    </image>
+    
+    <item>
+      <title>Targeted Maximum Likelihood Estimation for Dynamic and Static Longitudinal Marginal Structural Working Models</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_targeted_maximum_lik/</link>
+      <pubDate>Wed, 18 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_targeted_maximum_lik/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

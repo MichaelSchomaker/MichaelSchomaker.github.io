@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>causal inference | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/tags/causal-inference/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/tags/causal-inference/index.xml" rel="self" type="application/rss+xml" />
+    <description>causal inference</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>causal inference</title>
+      <link>https://MichaelSchomaker.github.io/tags/causal-inference/</link>
+    </image>
+    
+    <item>
+      <title>Estimating the Effect of Central Bank Independence on Inflation Using Longitudinal Targeted Maximum Likelihood Estimation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2021-03-01_estimating_the_effect/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2021-03-01_estimating_the_effect/</guid>
+      <description>&lt;p&gt;Recently, there has been a lot of interest and discussion about the use of causal inference in economics. Whether it is feasible and whether there are benefits of working with a directed acyclic
+graph (DAG) and a non-parametric structural equation framework, is one aspect of the debate. A summary on this discussion can be found in a working paper by Imbens (see 
+&lt;a href=&#34;https://arxiv.org/abs/1907.07271&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In our paper, we are interested in a controversial macroeconomic question: does an independent central bank (CBI) reduce a country&amp;rsquo;s inflation? This question is causal in nature and certainly requires a causal inference approach
+to be answered. We have made the effort to develop an elaborate DAG for this question based on economic theory and substantiated it with  literature as much as possible. Our suggestion is to commit to this causal model (i.e. the DAG),
+motivate it in much detail, discuss possible violations of it, and ultimately conduct sensitivity analyses that evaluate effect estimates under different (structural) assumptions.&lt;/p&gt;
+&lt;p&gt;In our analayses, we use the i) identifiability considerations from the derived DAG and ii) longitudinal targeted maximum likelihood estimation (LTMLE), a doubly robust estimation technique, 
+in conjunction with data-adaptive estimation approaches (&amp;ldquo;super learning&amp;rdquo;) to derive our effect estimates. 
+The advantage of using such an approach is that with LTMLE data-adaptive estimation can be used while still retaining valid inference (under assumptions). This reduces the risk of model mis-specification compared to estimation
+techniques which require the commitment to parametric assumptions, such as inverse probability of treatment weighting.&lt;/p&gt;
+&lt;p&gt;While certainly challenging, our paper shows that even for complex macroeconomic questions, it is possible to develop a causal model and implement modern doubly robust longitudinal effect estimators. As with many questions in economics and 
+the social sciences, one has to consider the possibility that some structural assumptions are incorrect. In our paper, we use both a purely data-adaptive approach as well as an approach motivated by economic theory to evaluate whether 
+different, but meaningful, structural assumptions would lead to different estimates. 
+Our main analysis (based on the developed DAG) suggests that if a country had legislated CBI for every year between 1998 and 2008, 
+it would have had an average increase in inflation of 0.01 (95% confidence interval (CI): -1.48; 1.50) percentage points in 2010. 
+The other two approaches, both of which make less structural assumptions, led to slightly different results: -0.44 (95% CI: -2.38; 1.59) and 0.01 (95% CI: -1.46; 1.47).&lt;/p&gt;
+&lt;p&gt;From a monetary policy point of view, we could thus conclude  that there is no strong support for the hypothesis that an independent central bank necessarily lowers inflation.&lt;/p&gt;
+&lt;p&gt;In summary: causal inference in economics, using directed acyclic graphs and modern doubly robust estimation strategies is challenging, but possible and certainly rewarding!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The impact of same-day antiretroviral therapy initiation under the WHO Treat-All policy</title>
+      <link>https://MichaelSchomaker.github.io/publication/2021-03-01_impact_same_day_art/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2021-03-01_impact_same_day_art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression and Causality</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-06-25_regression_causality/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-06-25_regression_causality/</guid>
+      <description>&lt;p&gt;The causal effect of an intervention (treatment/exposure) on an outcome can be estimated by: i) specifying knowledge about the data-generating process; ii) assessing under what assumptions a target quantity, such as for example a causal odds ratio, can be identified given the specified knowledge (and given the measured data); and then, iii) using appropriate statistical estimation techniques to estimate the desired parameter of interest. As regression is the cornerstone of statistical analysis, it seems obvious to ask: is it appropriate to use estimated regression parameters for causal effect estimation? It turns out that using regression for effect estimation is possible, but typically requires more assumptions than competing methods. This manuscript provides a comprehensive summary of the assumptions needed to identify and estimate a causal parameter using regression and, equally important, discusses the resulting implications for statistical practice.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The impact of delayed switch to second-line antiretroviral therapy on mortality, depending on failure time definition and CD4 count at failure</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-01-01_the_impact_of_delaye/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-01-01_the_impact_of_delaye/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increased Mortality with Delayed and Missed Switch to Second-Line Antiretroviral Therapy in South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-01-01_increased_mortality_/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-01-01_increased_mortality_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regarding: Effect Estimates in Randomized Trials and Observational Studies: Comparing Apples with Apples</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_regarding_effect_est/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_regarding_effect_est/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When and when not to use optimal model averaging</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_when_and_when_not_to/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_when_and_when_not_to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using Longitudinal Targeted Maximum Likelihood Estimation in Complex Settings with Dynamic Interventions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_using_longitudinal_t/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_using_longitudinal_t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paradoxical Collider Effect in the Analysis of Non-Communicable Disease Epidemiological Data: a reproducible illustration and web application</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_paradoxical_collider/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_paradoxical_collider/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What Should We Do When HIV-positive Children Fail First-line Combination Antiretroviral Therapy? A Comparison of 4 ART Management Strategies</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_what_should_we_do_wh/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_what_should_we_do_wh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effect Modification and Collapsibility in Evaluations of Public Health Interventions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_effect_modification_/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_effect_modification_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Effect of Electrical Load Shedding on Pediatric Hospital Admissions in South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_the_effect_of_electr/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_the_effect_of_electr/</guid>
+      <description>&lt;p&gt;The Republic of South Africa (SA) faced repeated episodes of temporary power shutdowns in 2014/2015, but also in the years thereafter. Based on my co-author&amp;rsquo;s experience at the burns unit at Red Cross children&amp;rsquo;s hospital,
+we had the hypothesis that this may have caused an increase in pediatric hospital admissions. After collecting publicly available data from Twitter and Facebook, establishing co-operations with the city of Cape Town, acquiring weather data, 
+developing a directed acyclic graph and under the consideration of various statistical angles, we concluded that load shedding (i.e. the temporary power shutdowns) did indeed increase the number of hospital admissions (by 10%; 95% confidence interval: 4%-15%).&lt;/p&gt;
+&lt;p&gt;What I like about this study is that it shows how to creatively answer questions when it is difficult to obtain data; in our case from ESKOM, the national monopoly power supplier. And how to integrate causal thinking routinely 
+into data analysis: co-operations and discussion on various levels helped us to derive a well thought through DAG, to gain confidence into our results and interpretations. There are many interesting angles in
+the supplementary material: for example the use causal inference in time series, the usefulness of model averaging when deciding for time trends, and a lot of clinical and spatial nuances not covered in the main text.&lt;/p&gt;
+&lt;p&gt;Those who are interested in the paper, may favour to watch the video abstract before jumping to the pdf&amp;hellip;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/6bjpRJqA9Vk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Optimal timing of antiretroviral treatment initiation in HIV-positive children and adolescents: a multiregional analysis from Southern Africa, West Africa and Europe</title>
+      <link>https://MichaelSchomaker.github.io/publication/2017-01-01_optimal_timing_of_an/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2017-01-01_optimal_timing_of_an/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Growth and Mortality Outcomes for Different Antiretroviral Therapy Initiation Criteria in Children aged 1-5 Years:  A Causal Modelling Analysis from West and Southern Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_growth_and_mortality/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_growth_and_mortality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Implications of causal modelling studies on the question of when to start antiretroviral treatment in young children</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_implications_of_caus/</link>
+      <pubDate>Sat, 01 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_implications_of_caus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Targeted Maximum Likelihood Estimation for Dynamic and Static Longitudinal Marginal Structural Working Models</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_targeted_maximum_lik/</link>
+      <pubDate>Wed, 18 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_targeted_maximum_lik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When to start antiretroviral therapy in children aged 2-5 years: a collaborative causal modelling analysis of cohort studies from southern Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_when_to_start_antire/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_when_to_start_antire/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effectiveness of patient adherence groups as a model of care for stable patients on antiretroviral therapy in Khayelitsha, Cape Town, South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_effectiveness_of_pat/</link>
+      <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_effectiveness_of_pat/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

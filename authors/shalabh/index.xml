@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shalabh | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/shalabh/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/shalabh/index.xml" rel="self" type="application/rss+xml" />
+    <description>Shalabh</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>Shalabh</title>
+      <link>https://MichaelSchomaker.github.io/authors/shalabh/</link>
+    </image>
+    
+    <item>
+      <title>Introduction to Statistics and Data Analysis - With Exercises, Solutions and Applications in R</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_introduction_to_stat/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_introduction_to_stat/</guid>
+      <description>&lt;p&gt;Our introcutory book contains a comprehensive and thorough overview of fundamental statistical concepts such as hypothesis testing, inference and regression; and each
+chapter is accompanied by a wealth of exercises and solutions. Have a look at the edicated 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/book/&#34;&gt;book page&lt;/a&gt; for more details.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linear Models and Generalizations - Least Squares and Alternatives, 3rd extended edition with contributions by Michael Schomaker</title>
+      <link>https://MichaelSchomaker.github.io/publication/2008-01-01_linear_models_and_ge/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2008-01-01_linear_models_and_ge/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

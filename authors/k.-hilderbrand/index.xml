@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K. Hilderbrand | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/k.-hilderbrand/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/k.-hilderbrand/index.xml" rel="self" type="application/rss+xml" />
+    <description>K. Hilderbrand</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 07 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>K. Hilderbrand</title>
+      <link>https://MichaelSchomaker.github.io/authors/k.-hilderbrand/</link>
+    </image>
+    
+    <item>
+      <title>Contemporary disengagement from antiretroviral therapy in Khayelitsha, South Africa: A cohort study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2017-01-01_contemporary_disenga/</link>
+      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2017-01-01_contemporary_disenga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Superior virologic and treatment outcomes when viral load is measured at 3 months compared to 6 months on antiretroviral therapy</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_superior_virologic_a/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_superior_virologic_a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effectiveness of patient adherence groups as a model of care for stable patients on antiretroviral therapy in Khayelitsha, Cape Town, South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_effectiveness_of_pat/</link>
+      <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_effectiveness_of_pat/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

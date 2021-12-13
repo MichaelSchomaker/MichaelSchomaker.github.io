@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>T. Gsponer | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/t.-gsponer/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/t.-gsponer/index.xml" rel="self" type="application/rss+xml" />
+    <description>T. Gsponer</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>T. Gsponer</title>
+      <link>https://MichaelSchomaker.github.io/authors/t.-gsponer/</link>
+    </image>
+    
+    <item>
+      <title>Non-ignorable loss to follow-up: correcting mortality estimates based on additional outcome ascertainment</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_non-ignorable_loss_t/</link>
+      <pubDate>Wed, 15 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_non-ignorable_loss_t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When to start antiretroviral therapy in children aged 2-5 years: a collaborative causal modelling analysis of cohort studies from southern Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_when_to_start_antire/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_when_to_start_antire/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

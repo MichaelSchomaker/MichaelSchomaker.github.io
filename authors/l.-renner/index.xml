@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>L. Renner | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/l.-renner/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/l.-renner/index.xml" rel="self" type="application/rss+xml" />
+    <description>L. Renner</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>L. Renner</title>
+      <link>https://MichaelSchomaker.github.io/authors/l.-renner/</link>
+    </image>
+    
+    <item>
+      <title>The epidemiology of adolescents living with perinatally acquired HIV: A cross-region global cohort analysis</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_the_epidemiology_of_/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_the_epidemiology_of_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimal timing of antiretroviral treatment initiation in HIV-positive children and adolescents: a multiregional analysis from Southern Africa, West Africa and Europe</title>
+      <link>https://MichaelSchomaker.github.io/publication/2017-01-01_optimal_timing_of_an/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2017-01-01_optimal_timing_of_an/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Growth and Mortality Outcomes for Different Antiretroviral Therapy Initiation Criteria in Children aged 1-5 Years:  A Causal Modelling Analysis from West and Southern Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_growth_and_mortality/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_growth_and_mortality/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

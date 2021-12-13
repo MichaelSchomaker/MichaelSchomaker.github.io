@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>M. Schomaker | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/m.-schomaker/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/m.-schomaker/index.xml" rel="self" type="application/rss+xml" />
+    <description>M. Schomaker</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>M. Schomaker</title>
+      <link>https://MichaelSchomaker.github.io/authors/m.-schomaker/</link>
+    </image>
+    
+    <item>
+      <title>Estimating the Effect of Central Bank Independence on Inflation Using Longitudinal Targeted Maximum Likelihood Estimation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2021-03-01_estimating_the_effect/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2021-03-01_estimating_the_effect/</guid>
+      <description>&lt;p&gt;Recently, there has been a lot of interest and discussion about the use of causal inference in economics. Whether it is feasible and whether there are benefits of working with a directed acyclic
+graph (DAG) and a non-parametric structural equation framework, is one aspect of the debate. A summary on this discussion can be found in a working paper by Imbens (see 
+&lt;a href=&#34;https://arxiv.org/abs/1907.07271&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In our paper, we are interested in a controversial macroeconomic question: does an independent central bank (CBI) reduce a country&amp;rsquo;s inflation? This question is causal in nature and certainly requires a causal inference approach
+to be answered. We have made the effort to develop an elaborate DAG for this question based on economic theory and substantiated it with  literature as much as possible. Our suggestion is to commit to this causal model (i.e. the DAG),
+motivate it in much detail, discuss possible violations of it, and ultimately conduct sensitivity analyses that evaluate effect estimates under different (structural) assumptions.&lt;/p&gt;
+&lt;p&gt;In our analayses, we use the i) identifiability considerations from the derived DAG and ii) longitudinal targeted maximum likelihood estimation (LTMLE), a doubly robust estimation technique, 
+in conjunction with data-adaptive estimation approaches (&amp;ldquo;super learning&amp;rdquo;) to derive our effect estimates. 
+The advantage of using such an approach is that with LTMLE data-adaptive estimation can be used while still retaining valid inference (under assumptions). This reduces the risk of model mis-specification compared to estimation
+techniques which require the commitment to parametric assumptions, such as inverse probability of treatment weighting.&lt;/p&gt;
+&lt;p&gt;While certainly challenging, our paper shows that even for complex macroeconomic questions, it is possible to develop a causal model and implement modern doubly robust longitudinal effect estimators. As with many questions in economics and 
+the social sciences, one has to consider the possibility that some structural assumptions are incorrect. In our paper, we use both a purely data-adaptive approach as well as an approach motivated by economic theory to evaluate whether 
+different, but meaningful, structural assumptions would lead to different estimates. 
+Our main analysis (based on the developed DAG) suggests that if a country had legislated CBI for every year between 1998 and 2008, 
+it would have had an average increase in inflation of 0.01 (95% confidence interval (CI): -1.48; 1.50) percentage points in 2010. 
+The other two approaches, both of which make less structural assumptions, led to slightly different results: -0.44 (95% CI: -2.38; 1.59) and 0.01 (95% CI: -1.46; 1.47).&lt;/p&gt;
+&lt;p&gt;From a monetary policy point of view, we could thus conclude  that there is no strong support for the hypothesis that an independent central bank necessarily lowers inflation.&lt;/p&gt;
+&lt;p&gt;In summary: causal inference in economics, using directed acyclic graphs and modern doubly robust estimation strategies is challenging, but possible and certainly rewarding!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The impact of same-day antiretroviral therapy initiation under the WHO Treat-All policy</title>
+      <link>https://MichaelSchomaker.github.io/publication/2021-03-01_impact_same_day_art/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2021-03-01_impact_same_day_art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virologic response of adolescents living with perinatally acquired HIV receiving antiretroviral therapy in the period of early adolescence (10-14 years) in South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2021-03-01_virologic_response/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2021-03-01_virologic_response/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HIV-1 Subtype C Tier 3 Viruses Have Increased Infectivity Compared to Tier 2 Viruses</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-10-01-hiv1_subtype/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-10-01-hiv1_subtype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression and Causality</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-06-25_regression_causality/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-06-25_regression_causality/</guid>
+      <description>&lt;p&gt;The causal effect of an intervention (treatment/exposure) on an outcome can be estimated by: i) specifying knowledge about the data-generating process; ii) assessing under what assumptions a target quantity, such as for example a causal odds ratio, can be identified given the specified knowledge (and given the measured data); and then, iii) using appropriate statistical estimation techniques to estimate the desired parameter of interest. As regression is the cornerstone of statistical analysis, it seems obvious to ask: is it appropriate to use estimated regression parameters for causal effect estimation? It turns out that using regression for effect estimation is possible, but typically requires more assumptions than competing methods. This manuscript provides a comprehensive summary of the assumptions needed to identify and estimate a causal parameter using regression and, equally important, discusses the resulting implications for statistical practice.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The impact of delayed switch to second-line antiretroviral therapy on mortality, depending on failure time definition and CD4 count at failure</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-01-01_the_impact_of_delaye/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-01-01_the_impact_of_delaye/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increased Mortality with Delayed and Missed Switch to Second-Line Antiretroviral Therapy in South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-01-01_increased_mortality_/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-01-01_increased_mortality_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HIV programmatic outcomes following implementation of the &#39;Treat-All&#39; policy in a public sector setting in Eswatini: a prospective cohort study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-01-01_hiv_programmatic_out/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-01-01_hiv_programmatic_out/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regarding: Effect Estimates in Randomized Trials and Observational Studies: Comparing Apples with Apples</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_regarding_effect_est/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_regarding_effect_est/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When and when not to use optimal model averaging</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_when_and_when_not_to/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_when_and_when_not_to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using Longitudinal Targeted Maximum Likelihood Estimation in Complex Settings with Dynamic Interventions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_using_longitudinal_t/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_using_longitudinal_t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Feasibility of antiretroviral therapy initiation under the treat-all policy under routine conditions: a prospective cohort study from Eswatini</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_feasibility_of_antir/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_feasibility_of_antir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decreased risk of HIV-associated TB during antiretroviral therapy expansion in rural Eswatini from 2009 to 2016: a cohort and population-based analysis</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_decreased_risk_of_hi/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_decreased_risk_of_hi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programmatic outcomes and impact of rapid public sector antiretroviral therapy expansion in adults prior to introduction of the WHO treat-all approach in rural Eswatini</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_programmatic_outcome/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_programmatic_outcome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paradoxical Collider Effect in the Analysis of Non-Communicable Disease Epidemiological Data: a reproducible illustration and web application</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_paradoxical_collider/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_paradoxical_collider/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What Should We Do When HIV-positive Children Fail First-line Combination Antiretroviral Therapy? A Comparison of 4 ART Management Strategies</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_what_should_we_do_wh/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_what_should_we_do_wh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effect Modification and Collapsibility in Evaluations of Public Health Interventions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_effect_modification_/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_effect_modification_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Effect of Electrical Load Shedding on Pediatric Hospital Admissions in South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_the_effect_of_electr/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_the_effect_of_electr/</guid>
+      <description>&lt;p&gt;The Republic of South Africa (SA) faced repeated episodes of temporary power shutdowns in 2014/2015, but also in the years thereafter. Based on my co-author&amp;rsquo;s experience at the burns unit at Red Cross children&amp;rsquo;s hospital,
+we had the hypothesis that this may have caused an increase in pediatric hospital admissions. After collecting publicly available data from Twitter and Facebook, establishing co-operations with the city of Cape Town, acquiring weather data, 
+developing a directed acyclic graph and under the consideration of various statistical angles, we concluded that load shedding (i.e. the temporary power shutdowns) did indeed increase the number of hospital admissions (by 10%; 95% confidence interval: 4%-15%).&lt;/p&gt;
+&lt;p&gt;What I like about this study is that it shows how to creatively answer questions when it is difficult to obtain data; in our case from ESKOM, the national monopoly power supplier. And how to integrate causal thinking routinely 
+into data analysis: co-operations and discussion on various levels helped us to derive a well thought through DAG, to gain confidence into our results and interpretations. There are many interesting angles in
+the supplementary material: for example the use causal inference in time series, the usefulness of model averaging when deciding for time trends, and a lot of clinical and spatial nuances not covered in the main text.&lt;/p&gt;
+&lt;p&gt;Those who are interested in the paper, may favour to watch the video abstract before jumping to the pdf&amp;hellip;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/6bjpRJqA9Vk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Schistosomiasis Burden and Its Association With Lower Measles Vaccine Responses in School Children From Rural Cameroon</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_schistosomiasis_burd/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_schistosomiasis_burd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Targeted maximum likelihood estimation for a binary treatment: A tutorial</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_targeted_maximum_lik/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_targeted_maximum_lik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bootstrap inference when using multiple imputation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_bootstrap_inference_/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_bootstrap_inference_/</guid>
+      <description>&lt;p&gt;For many analyses, it is common to use both bootstrapping and multiple imputation (MI): MI to address missing data and bootstrapping to obtain standard errors. For example, when using the g-formula in causal inference, bootstrapping is required to 
+obtain standard errors; however, the data may be multiply imputed due to missing (baseline) data in the population of interest. How should bootstrapping and multiple imputation then be combined? First bootstrapping ($B$ times, including missing data) and then impute ($M$ times); or first impute and then bootstrap the multiply 
+imputed data? For the latter approach, one could use bootstrapping to estimate the standard error in each imputed
+data set and apply the standard MI combining rules (&amp;ldquo;Rubin&amp;rsquo;s rules&amp;rdquo;); alternatively, the $B \times M$ estimates could be pooled and 95% confidence
+intervals could be calculated based on the 2.5th and 97.5th percentiles of the respective empirical distribution. For the
+former  approach, either multiple imputation combining rules can be applied to the imputed data of each bootstrap sample
+to obtain $B$ point estimates, which in turn, may be used to construct confidence intervals, or the $B \times M$ estimates of the
+pooled data are used for interval estimation.&lt;/p&gt;
+&lt;p&gt;In our paper, we evaluated the above four approaches and found that three are generally valid whereas one - first imputing, then bootstrapping, and then pooling the estimates - is invalid. We describe the advantages, disadvantages and implications
+of all approaches and give guidance which approach may be suitable in which context. Under the &lt;em&gt;code&lt;/em&gt; tag above, an example on how to implement the four respective approaches is contained as well as code of the simulation studies from the paper.&lt;/p&gt;
+&lt;p&gt;What is nice about this manuscript is not only that it provides practical guidance, but also that it sparked some other interesting research. For instance, Bartlett and Hughes consider the combination of imputation and bootstrapping
+when imputation and analysis models are uncongenial or misspecified (see 
+&lt;a href=&#34;https://arxiv.org/abs/1911.09980&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). Interestingly, they find that bootstrapping, followed by imputation, and not pooling estimates, is the preferred 
+approach in this case. This is in line with our suggested approach on model selection and averaging with multiply imputed data (see 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/project/mami/&#34;&gt;here&lt;/a&gt;). Also, van Hippel and Bartlett proposed an
+alternative, computationally efficient, point estimator and confidence interval when bootstraping followed by MI, which is implemented in an R-package (
+&lt;a href=&#34;https://cran.r-project.org/web/packages/bootImpute/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bootImpute &lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;It is nice to see this work being used and further developed; also after this manuscript got initially rejected by an applied stats journal because a reviewer insisted: &amp;ldquo;There is nothing really new in the paper&amp;rdquo;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The epidemiology of adolescents living with perinatally acquired HIV: A cross-region global cohort analysis</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_the_epidemiology_of_/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_the_epidemiology_of_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inequality in outcomes for adolescents living with perinatally acquired HIV in sub-Saharan Africa: a Collaborative Initiative for Paediatric HIV Education and Research (CIPHER) Cohort Collaboration analysis</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_inequality_in_outcom/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_inequality_in_outcom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assessing the risk of dolutegravir for women of childbearing potential</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_assessing_the_risk_o/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_assessing_the_risk_o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contemporary disengagement from antiretroviral therapy in Khayelitsha, South Africa: A cohort study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2017-01-01_contemporary_disenga/</link>
+      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2017-01-01_contemporary_disenga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twelve-year mortality in adults initiating antiretroviral therapy in South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2017-01-01_twelve-year_mortalit/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2017-01-01_twelve-year_mortalit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimal timing of antiretroviral treatment initiation in HIV-positive children and adolescents: a multiregional analysis from Southern Africa, West Africa and Europe</title>
+      <link>https://MichaelSchomaker.github.io/publication/2017-01-01_optimal_timing_of_an/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2017-01-01_optimal_timing_of_an/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to Statistics and Data Analysis - With Exercises, Solutions and Applications in R</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_introduction_to_stat/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_introduction_to_stat/</guid>
+      <description>&lt;p&gt;Our introcutory book contains a comprehensive and thorough overview of fundamental statistical concepts such as hypothesis testing, inference and regression; and each
+chapter is accompanied by a wealth of exercises and solutions. Have a look at the edicated 
+&lt;a href=&#34;https://MichaelSchomaker.github.io/book/&#34;&gt;book page&lt;/a&gt; for more details.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Growth and Mortality Outcomes for Different Antiretroviral Therapy Initiation Criteria in Children aged 1-5 Years:  A Causal Modelling Analysis from West and Southern Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_growth_and_mortality/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_growth_and_mortality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Risk Factors for Incident Diabetes in a Cohort Taking First-Line Nonnucleoside Reverse Transcriptase Inhibitor-Based Antiretroviral Therapy</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_risk_factors_for_inc/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_risk_factors_for_inc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mercury and neuromotor function among children in a rural town in Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_mercury_and_neuromot/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_mercury_and_neuromot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CD4 count at antiretroviral therapy initiation and the risk of loss to follow-up: results from a multicentre cohort study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_cd4_count_at_antiret/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_cd4_count_at_antiret/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effect of Lopinavir and Nevirapine Concentrations on Viral Outcomes in Protease Inhibitor-experienced HIV-infected Children</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_effect_of_lopinavir_/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_effect_of_lopinavir_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A comparison of death recording by health centres and civil registration in South Africans receiving antiretroviral treatment</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_a_comparison_of_deat/</link>
+      <pubDate>Wed, 16 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_a_comparison_of_deat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Independent predictors of tuberculosis mortality in a high HIV prevalence setting: a retrospective cohort study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_independent_predicto/</link>
+      <pubDate>Tue, 06 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_independent_predicto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Superior virologic and treatment outcomes when viral load is measured at 3 months compared to 6 months on antiretroviral therapy</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_superior_virologic_a/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_superior_virologic_a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simultaneous Treatment of Missing Data and Measurement Error in HIV Research Using Multiple Overimputation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_simultaneous_treatme/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_simultaneous_treatme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Is the fetoplacental ratio a differential marker of fetal growth restriction in small for gestational age infants?</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_is_the_fetoplacental/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_is_the_fetoplacental/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Age in antiretroviral therapy programmes in South Africa: a retrospective, multicentre, observational cohort study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_age_in_antiretrovira/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_age_in_antiretrovira/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anti-V3-Glycan and Anti-MPER Neutralizing Antibodies, but Not Anti-V2-Glycan Site Antibodies, Are Strongly Associated with Greater Anti-HIV-1 Neutralization Breadth and Potency</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_anti-v3-glycan_and_a/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_anti-v3-glycan_and_a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Correction: Risk Factors for Mercury Exposure of Children in a Rural Mining Town in Northern Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_correction_risk_fact/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_correction_risk_fact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Do increasing rates of loss to follow-up in antiretroviral treatment programs imply deteriorating patient retention?</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_do_increasing_rates_/</link>
+      <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_do_increasing_rates_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Implications of causal modelling studies on the question of when to start antiretroviral treatment in young children</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_implications_of_caus/</link>
+      <pubDate>Sat, 01 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_implications_of_caus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mortality in patients with HIV-1 infection starting antiretroviral therapy in South Africa, Europe, or North America: a collaborative analysis of prospective studies</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_mortality_in_patient/</link>
+      <pubDate>Tue, 09 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_mortality_in_patient/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Targeted Maximum Likelihood Estimation for Dynamic and Static Longitudinal Marginal Structural Working Models</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_targeted_maximum_lik/</link>
+      <pubDate>Wed, 18 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_targeted_maximum_lik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virologic response in children treated with abacavir-compared with stavudine-based antiretroviral treatment: a South African multi-cohort analysis</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_virologic_response_i/</link>
+      <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_virologic_response_i/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model selection and model averaging after multiple imputation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_model_selection_and_/</link>
+      <pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_model_selection_and_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plasma lopinavir concentrations predict virological failure in a cohort of South African children initiating a protease-inhibitor-based regimen</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_plasma_lopinavir_con/</link>
+      <pubDate>Fri, 14 Feb 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_plasma_lopinavir_con/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Non-ignorable loss to follow-up: correcting mortality estimates based on additional outcome ascertainment</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_non-ignorable_loss_t/</link>
+      <pubDate>Wed, 15 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_non-ignorable_loss_t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Risk factors for mercury exposure of children in a rural mining town in northern Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_risk_factors_for_mer/</link>
+      <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_risk_factors_for_mer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When to start antiretroviral therapy in children aged 2-5 years: a collaborative causal modelling analysis of cohort studies from southern Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_when_to_start_antire/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_when_to_start_antire/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unemployment and stillbirth risk among foreign-born and Spanish pregnant women in Spain, 2007-2010: a multilevel analysis study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_unemployment_and_sti/</link>
+      <pubDate>Sun, 20 Oct 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_unemployment_and_sti/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CD4 count slope and mortality in HIV-infected patients on antiretroviral therapy: multicohort analysis from South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_cd4_count_slope_and_/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_cd4_count_slope_and_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Immune recovery after starting ART in HIV-infected patients presenting and not presenting with tuberculosis in South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_immune_recovery_afte/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_immune_recovery_afte/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life expectancies of South African adults starting antiretroviral treatment: collaborative analysis of cohort studies</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_life_expectancies_of/</link>
+      <pubDate>Tue, 09 Apr 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_life_expectancies_of/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effects of rifampin-based antituberculosis therapy on plasma efavirenz concentrations in children vary by CYP2B6 genotype</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_effects_of_rifampin-/</link>
+      <pubDate>Mon, 04 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_effects_of_rifampin-/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effectiveness of patient adherence groups as a model of care for stable patients on antiretroviral therapy in Khayelitsha, Cape Town, South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_effectiveness_of_pat/</link>
+      <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_effectiveness_of_pat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tuberculosis and the risk of opportunistic infections and cancers in HIV-infected patients starting ART in Southern Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_tuberculosis_and_the/</link>
+      <pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_tuberculosis_and_the/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gender differences in survival among adult patients starting antiretroviral therapy in South Africa: a multicentre cohort study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2012-01-01_gender_differences_i/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2012-01-01_gender_differences_i/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Baseline predictors of sputum culture conversion in pulmonary tuberculosis: importance of cavities, smoking, time to detection and W-Beijing genotype</title>
+      <link>https://MichaelSchomaker.github.io/publication/2012-01-01_baseline_predictors_/</link>
+      <pubDate>Wed, 04 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2012-01-01_baseline_predictors_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elevation and cholera: an epidemiological spatial analysis of the cholera epidemic in Harare, Zimbabwe, 2008-2009</title>
+      <link>https://MichaelSchomaker.github.io/publication/2012-01-01_elevation_and_choler/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2012-01-01_elevation_and_choler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Refined identification of neutralization-resistant HIV-1 CRF02_AG viruses</title>
+      <link>https://MichaelSchomaker.github.io/publication/2012-01-01_refined_identificati/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2012-01-01_refined_identificati/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shrinkage averaging estimation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2012-01-01_shrinkage_averaging_/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2012-01-01_shrinkage_averaging_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model averaging in factor analysis: an analysis of Olympic decathlon data</title>
+      <link>https://MichaelSchomaker.github.io/publication/2011-01-01_model_averaging_in_f/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2011-01-01_model_averaging_in_f/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Frequentist Model Averaging with missing observations</title>
+      <link>https://MichaelSchomaker.github.io/publication/2010-01-01_frequentist_model_av/</link>
+      <pubDate>Wed, 01 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2010-01-01_frequentist_model_av/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selektieren und Kombinieren von Modellen unter Berücksichtigung der Problematik fehlender Daten (in German, also doctoral thesis)</title>
+      <link>https://MichaelSchomaker.github.io/publication/2010-01-01_selektieren_und_komb/</link>
+      <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2010-01-01_selektieren_und_komb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arbeitsbuch zur deskriptiven und induktiven Statistik (in German)</title>
+      <link>https://MichaelSchomaker.github.io/publication/2009-01-01_arbeitsbuch_zur_desk/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2009-01-01_arbeitsbuch_zur_desk/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

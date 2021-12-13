@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>L. Kuhn | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/l.-kuhn/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/l.-kuhn/index.xml" rel="self" type="application/rss+xml" />
+    <description>L. Kuhn</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>L. Kuhn</title>
+      <link>https://MichaelSchomaker.github.io/authors/l.-kuhn/</link>
+    </image>
+    
+    <item>
+      <title>Effect of Lopinavir and Nevirapine Concentrations on Viral Outcomes in Protease Inhibitor-experienced HIV-infected Children</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_effect_of_lopinavir_/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_effect_of_lopinavir_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virologic response in children treated with abacavir-compared with stavudine-based antiretroviral treatment: a South African multi-cohort analysis</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_virologic_response_i/</link>
+      <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_virologic_response_i/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plasma lopinavir concentrations predict virological failure in a cohort of South African children initiating a protease-inhibitor-based regimen</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_plasma_lopinavir_con/</link>
+      <pubDate>Fri, 14 Feb 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_plasma_lopinavir_con/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

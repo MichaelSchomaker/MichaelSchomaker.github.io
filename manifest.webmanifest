@@ -1,0 +1,18 @@
+{
+  "name": "Michael Schomaker",
+  "short_name": "Michael Schomaker",
+  "lang": "en-us",
+  "theme_color": "#207833",
+  "background_color": "#207833",
+  "icons": [{
+    "src": "/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_192x192_fill_lanczos_center_3.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+    "src": "/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png",
+    "sizes": "512x512",
+    "type": "image/png"
+     }],
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}

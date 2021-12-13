@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>H. Toutenburg | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/h.-toutenburg/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/h.-toutenburg/index.xml" rel="self" type="application/rss+xml" />
+    <description>H. Toutenburg</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 04 Mar 2009 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>H. Toutenburg</title>
+      <link>https://MichaelSchomaker.github.io/authors/h.-toutenburg/</link>
+    </image>
+    
+    <item>
+      <title>Deskriptive Statistik - Eine Einführung in Methoden und Anwendungen mit R und SPSS (in German), 7th extended edition with contributions by Michael Schomaker</title>
+      <link>https://MichaelSchomaker.github.io/publication/2009-01-01_deskriptive_statisti/</link>
+      <pubDate>Wed, 04 Mar 2009 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2009-01-01_deskriptive_statisti/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arbeitsbuch zur deskriptiven und induktiven Statistik (in German)</title>
+      <link>https://MichaelSchomaker.github.io/publication/2009-01-01_arbeitsbuch_zur_desk/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2009-01-01_arbeitsbuch_zur_desk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Six Sigma – Methoden und Statistik für die Praxis (in German), 2nd extended edition with contributions by Ingrid Kreuzmair, Michael Schomaker, Dietmar Williams-Böker</title>
+      <link>https://MichaelSchomaker.github.io/publication/2009-01-01_six_sigma_method/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2009-01-01_six_sigma_method/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Induktive Statistik - Eine Einführung mit R und SPSS (in German), 4th extended edition with contributions by Michael Schomaker and Malte Wißmann</title>
+      <link>https://MichaelSchomaker.github.io/publication/2008-01-01_induktive_statistik_/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2008-01-01_induktive_statistik_/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear Models and Generalizations - Least Squares and Alternatives, 3rd extended edition with contributions by Michael Schomaker</title>
+      <link>https://MichaelSchomaker.github.io/publication/2008-01-01_linear_models_and_ge/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2008-01-01_linear_models_and_ge/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

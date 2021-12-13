@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>six sigma | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/tags/six-sigma/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/tags/six-sigma/index.xml" rel="self" type="application/rss+xml" />
+    <description>six sigma</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jan 2009 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>six sigma</title>
+      <link>https://MichaelSchomaker.github.io/tags/six-sigma/</link>
+    </image>
+    
+    <item>
+      <title>Six Sigma – Methoden und Statistik für die Praxis (in German), 2nd extended edition with contributions by Ingrid Kreuzmair, Michael Schomaker, Dietmar Williams-Böker</title>
+      <link>https://MichaelSchomaker.github.io/publication/2009-01-01_six_sigma_method/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2009-01-01_six_sigma_method/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TMLE | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/tags/tmle/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/tags/tmle/index.xml" rel="self" type="application/rss+xml" />
+    <description>TMLE</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>TMLE</title>
+      <link>https://MichaelSchomaker.github.io/tags/tmle/</link>
+    </image>
+    
+    <item>
+      <title>Estimating the Effect of Central Bank Independence on Inflation Using Longitudinal Targeted Maximum Likelihood Estimation</title>
+      <link>https://MichaelSchomaker.github.io/publication/2021-03-01_estimating_the_effect/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2021-03-01_estimating_the_effect/</guid>
+      <description>&lt;p&gt;Recently, there has been a lot of interest and discussion about the use of causal inference in economics. Whether it is feasible and whether there are benefits of working with a directed acyclic
+graph (DAG) and a non-parametric structural equation framework, is one aspect of the debate. A summary on this discussion can be found in a working paper by Imbens (see 
+&lt;a href=&#34;https://arxiv.org/abs/1907.07271&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In our paper, we are interested in a controversial macroeconomic question: does an independent central bank (CBI) reduce a country&amp;rsquo;s inflation? This question is causal in nature and certainly requires a causal inference approach
+to be answered. We have made the effort to develop an elaborate DAG for this question based on economic theory and substantiated it with  literature as much as possible. Our suggestion is to commit to this causal model (i.e. the DAG),
+motivate it in much detail, discuss possible violations of it, and ultimately conduct sensitivity analyses that evaluate effect estimates under different (structural) assumptions.&lt;/p&gt;
+&lt;p&gt;In our analayses, we use the i) identifiability considerations from the derived DAG and ii) longitudinal targeted maximum likelihood estimation (LTMLE), a doubly robust estimation technique, 
+in conjunction with data-adaptive estimation approaches (&amp;ldquo;super learning&amp;rdquo;) to derive our effect estimates. 
+The advantage of using such an approach is that with LTMLE data-adaptive estimation can be used while still retaining valid inference (under assumptions). This reduces the risk of model mis-specification compared to estimation
+techniques which require the commitment to parametric assumptions, such as inverse probability of treatment weighting.&lt;/p&gt;
+&lt;p&gt;While certainly challenging, our paper shows that even for complex macroeconomic questions, it is possible to develop a causal model and implement modern doubly robust longitudinal effect estimators. As with many questions in economics and 
+the social sciences, one has to consider the possibility that some structural assumptions are incorrect. In our paper, we use both a purely data-adaptive approach as well as an approach motivated by economic theory to evaluate whether 
+different, but meaningful, structural assumptions would lead to different estimates. 
+Our main analysis (based on the developed DAG) suggests that if a country had legislated CBI for every year between 1998 and 2008, 
+it would have had an average increase in inflation of 0.01 (95% confidence interval (CI): -1.48; 1.50) percentage points in 2010. 
+The other two approaches, both of which make less structural assumptions, led to slightly different results: -0.44 (95% CI: -2.38; 1.59) and 0.01 (95% CI: -1.46; 1.47).&lt;/p&gt;
+&lt;p&gt;From a monetary policy point of view, we could thus conclude  that there is no strong support for the hypothesis that an independent central bank necessarily lowers inflation.&lt;/p&gt;
+&lt;p&gt;In summary: causal inference in economics, using directed acyclic graphs and modern doubly robust estimation strategies is challenging, but possible and certainly rewarding!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The impact of same-day antiretroviral therapy initiation under the WHO Treat-All policy</title>
+      <link>https://MichaelSchomaker.github.io/publication/2021-03-01_impact_same_day_art/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2021-03-01_impact_same_day_art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The impact of delayed switch to second-line antiretroviral therapy on mortality, depending on failure time definition and CD4 count at failure</title>
+      <link>https://MichaelSchomaker.github.io/publication/2020-01-01_the_impact_of_delaye/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2020-01-01_the_impact_of_delaye/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using Longitudinal Targeted Maximum Likelihood Estimation in Complex Settings with Dynamic Interventions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2019-01-01_using_longitudinal_t/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2019-01-01_using_longitudinal_t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Effect of Electrical Load Shedding on Pediatric Hospital Admissions in South Africa</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_the_effect_of_electr/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_the_effect_of_electr/</guid>
+      <description>&lt;p&gt;The Republic of South Africa (SA) faced repeated episodes of temporary power shutdowns in 2014/2015, but also in the years thereafter. Based on my co-author&amp;rsquo;s experience at the burns unit at Red Cross children&amp;rsquo;s hospital,
+we had the hypothesis that this may have caused an increase in pediatric hospital admissions. After collecting publicly available data from Twitter and Facebook, establishing co-operations with the city of Cape Town, acquiring weather data, 
+developing a directed acyclic graph and under the consideration of various statistical angles, we concluded that load shedding (i.e. the temporary power shutdowns) did indeed increase the number of hospital admissions (by 10%; 95% confidence interval: 4%-15%).&lt;/p&gt;
+&lt;p&gt;What I like about this study is that it shows how to creatively answer questions when it is difficult to obtain data; in our case from ESKOM, the national monopoly power supplier. And how to integrate causal thinking routinely 
+into data analysis: co-operations and discussion on various levels helped us to derive a well thought through DAG, to gain confidence into our results and interpretations. There are many interesting angles in
+the supplementary material: for example the use causal inference in time series, the usefulness of model averaging when deciding for time trends, and a lot of clinical and spatial nuances not covered in the main text.&lt;/p&gt;
+&lt;p&gt;Those who are interested in the paper, may favour to watch the video abstract before jumping to the pdf&amp;hellip;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/6bjpRJqA9Vk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Targeted Maximum Likelihood Estimation for Dynamic and Static Longitudinal Marginal Structural Working Models</title>
+      <link>https://MichaelSchomaker.github.io/publication/2014-01-01_targeted_maximum_lik/</link>
+      <pubDate>Wed, 18 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2014-01-01_targeted_maximum_lik/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

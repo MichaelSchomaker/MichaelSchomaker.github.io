@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K. Radon | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/k.-radon/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/k.-radon/index.xml" rel="self" type="application/rss+xml" />
+    <description>K. Radon</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>K. Radon</title>
+      <link>https://MichaelSchomaker.github.io/authors/k.-radon/</link>
+    </image>
+    
+    <item>
+      <title>Mercury and neuromotor function among children in a rural town in Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2016-01-01_mercury_and_neuromot/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2016-01-01_mercury_and_neuromot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Correction: Risk Factors for Mercury Exposure of Children in a Rural Mining Town in Northern Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2015-01-01_correction_risk_fact/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2015-01-01_correction_risk_fact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Risk factors for mercury exposure of children in a rural mining town in northern Chile</title>
+      <link>https://MichaelSchomaker.github.io/publication/2013-01-01_risk_factors_for_mer/</link>
+      <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2013-01-01_risk_factors_for_mer/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

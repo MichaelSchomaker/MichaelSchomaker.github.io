@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>B. Rachet | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/authors/b.-rachet/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/authors/b.-rachet/index.xml" rel="self" type="application/rss+xml" />
+    <description>B. Rachet</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 23 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>B. Rachet</title>
+      <link>https://MichaelSchomaker.github.io/authors/b.-rachet/</link>
+    </image>
+    
+    <item>
+      <title>Targeted maximum likelihood estimation for a binary treatment: A tutorial</title>
+      <link>https://MichaelSchomaker.github.io/publication/2018-01-01_targeted_maximum_lik/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2018-01-01_targeted_maximum_lik/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
