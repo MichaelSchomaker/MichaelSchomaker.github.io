@@ -5,7 +5,7 @@
     <link>https://MichaelSchomaker.github.io/publication_types/3/</link>
       <atom:link href="https://MichaelSchomaker.github.io/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
     <description>3</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 11 May 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
       <title>3</title>
@@ -13,35 +13,25 @@
     </image>
     
     <item>
+      <title>Causal Inference for Continuous Multiple Time Point Interventions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The Delta-Method and Influence Function in Medical Statistics: a Reproducible Tutorial</title>
       <link>https://MichaelSchomaker.github.io/publication/2022-07-01_delta_method/</link>
-      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://MichaelSchomaker.github.io/publication/2022-07-01_delta_method/</guid>
-      <description>&lt;p&gt;Recently, there has been a lot of interest and discussion about the use of causal inference in economics. Whether it is feasible and whether there are benefits of working with a directed acyclic
-graph (DAG) and a non-parametric structural equation framework, is one aspect of the debate. A summary on this discussion can be found in a working paper by Imbens (see 
-&lt;a href=&#34;https://arxiv.org/abs/1907.07271&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;In our paper, we are interested in a controversial macroeconomic question: does an independent central bank (CBI) reduce a country&amp;rsquo;s inflation? This question is causal in nature and certainly requires a causal inference approach
-to be answered. We have made the effort to develop an elaborate DAG for this question based on economic theory and substantiated it with  literature as much as possible. Our suggestion is to commit to this causal model (i.e. the DAG),
-motivate it in much detail, discuss possible violations of it, and ultimately conduct sensitivity analyses that evaluate effect estimates under different (structural) assumptions.&lt;/p&gt;
-&lt;p&gt;In our analayses, we use the i) identifiability considerations from the derived DAG and ii) longitudinal targeted maximum likelihood estimation (LTMLE), a doubly robust estimation technique, 
-in conjunction with data-adaptive estimation approaches (&amp;ldquo;super learning&amp;rdquo;) to derive our effect estimates. 
-The advantage of using such an approach is that with LTMLE data-adaptive estimation can be used while still retaining valid inference (under assumptions). This reduces the risk of model mis-specification compared to estimation
-techniques which require the commitment to parametric assumptions, such as inverse probability of treatment weighting.&lt;/p&gt;
-&lt;p&gt;While certainly challenging, our paper shows that even for complex macroeconomic questions, it is possible to develop a causal model and implement modern doubly robust longitudinal effect estimators. As with many questions in economics and 
-the social sciences, one has to consider the possibility that some structural assumptions are incorrect. In our paper, we use both a purely data-adaptive approach as well as an approach motivated by economic theory to evaluate whether 
-different, but meaningful, structural assumptions would lead to different estimates. 
-Our main analysis (based on the developed DAG) suggests that if a country had legislated CBI for every year between 1998 and 2008, 
-it would have had an average increase in inflation of 0.01 (95% confidence interval (CI): -1.48; 1.50) percentage points in 2010. 
-The other two approaches, both of which make less structural assumptions, led to slightly different results: -0.44 (95% CI: -2.38; 1.59) and 0.01 (95% CI: -1.46; 1.47).&lt;/p&gt;
-&lt;p&gt;From a monetary policy point of view, we could thus conclude  that there is no strong support for the hypothesis that an independent central bank necessarily lowers inflation.&lt;/p&gt;
-&lt;p&gt;In summary: causal inference in economics, using directed acyclic graphs and modern doubly robust estimation strategies is challenging, but possible and certainly rewarding!&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
       <title>Regression and Causality</title>
       <link>https://MichaelSchomaker.github.io/publication/2020-06-25_regression_causality/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://MichaelSchomaker.github.io/publication/2020-06-25_regression_causality/</guid>
       <description>&lt;p&gt;The causal effect of an intervention (treatment/exposure) on an outcome can be estimated by: i) specifying knowledge about the data-generating process; ii) assessing under what assumptions a target quantity, such as for example a causal odds ratio, can be identified given the specified knowledge (and given the measured data); and then, iii) using appropriate statistical estimation techniques to estimate the desired parameter of interest. As regression is the cornerstone of statistical analysis, it seems obvious to ask: is it appropriate to use estimated regression parameters for causal effect estimation? It turns out that using regression for effect estimation is possible, but typically requires more assumptions than competing methods. This manuscript provides a comprehensive summary of the assumptions needed to identify and estimate a causal parameter using regression and, equally important, discusses the resulting implications for statistical practice.&lt;/p&gt;
 </description>
