@@ -5,7 +5,7 @@
     <link>https://MichaelSchomaker.github.io/</link>
       <atom:link href="https://MichaelSchomaker.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael Schomaker</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 11 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
       <title>Michael Schomaker</title>
@@ -197,10 +197,50 @@ that is the weighted combination which minimizes the cross validation error. It 
     </item>
     
     <item>
+      <title>Is Same-Day Antiretroviral Therapy Initiation Beneficial? Methodological Aspects when Comparing Observational and Randomized Studies</title>
+      <link>https://MichaelSchomaker.github.io/publication/2023-12-31_is_same_day/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2023-12-31_is_same_day/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Causal Fair Machine Learning via Rank-Preserving Interventional Distributions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2023-12-30_causal_fair_ml/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2023-12-30_causal_fair_ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sustained high fatality during TB therapy amid rapid decline in TB mortality at population level: A retrospective cohort and ecological analysis from Shiselweni, Eswatini</title>
+      <link>https://MichaelSchomaker.github.io/publication/2023-12-15_sustained_high_fatality/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2023-12-15_sustained_high_fatality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Causal Inference for Continuous Multiple Time Point Interventions</title>
       <link>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</link>
-      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life years lost associated with mental illness: A cohort study of beneficiaries of a South African medical insurance scheme</title>
+      <link>https://MichaelSchomaker.github.io/publication/2023-11-01_life_years_lost/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2023-11-01_life_years_lost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Determinants of low health-related quality of life in patients with myelodysplastic syndromes: EUMDS Registry study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2023-06-27_determinants_of_low/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2023-06-27_determinants_of_low/</guid>
       <description></description>
     </item>
     
