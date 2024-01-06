@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="A new R-package -- details to be announced soon...">
+  <meta name="description" content="Causal Inference for Continuous Interventions">
 
   
   <link rel="alternate" hreflang="en-us" href="https://MichaelSchomaker.github.io/project/cici/">
@@ -278,13 +278,13 @@
   <meta property="og:site_name" content="Michael Schomaker">
   <meta property="og:url" content="https://MichaelSchomaker.github.io/project/cici/">
   <meta property="og:title" content="CICI | Michael Schomaker">
-  <meta property="og:description" content="A new R-package -- details to be announced soon..."><meta property="og:image" content="https://MichaelSchomaker.github.io/project/cici/featured.jpg">
-  <meta property="twitter:image" content="https://MichaelSchomaker.github.io/project/cici/featured.jpg"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Causal Inference for Continuous Interventions"><meta property="og:image" content="https://MichaelSchomaker.github.io/project/cici/featured.jpeg">
+  <meta property="twitter:image" content="https://MichaelSchomaker.github.io/project/cici/featured.jpeg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2019-06-28T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2023-01-04T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2019-06-28T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2023-01-04T00:00:00&#43;00:00">
   
 
   
@@ -311,11 +311,11 @@
   "headline": "CICI",
   
   "image": [
-    "https://MichaelSchomaker.github.io/project/cici/featured.jpg"
+    "https://MichaelSchomaker.github.io/project/cici/featured.jpeg"
   ],
   
-  "datePublished": "2019-06-28T00:00:00Z",
-  "dateModified": "2019-06-28T00:00:00Z",
+  "datePublished": "2023-01-04T00:00:00Z",
+  "dateModified": "2023-01-04T00:00:00Z",
   
   "publisher": {
     "@type": "Organization",
@@ -325,7 +325,7 @@
       "url": "https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "A new R-package -- details to be announced soon..."
+  "description": "Causal Inference for Continuous Interventions"
 }
 </script>
 
@@ -638,7 +638,7 @@
     
       
     
-    Jun 28, 2019
+    Jan 4, 2023
   </span>
   
 
@@ -678,8 +678,216 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p><strong>CICI</strong> is a new 
-  <i class="fab fa-r-project  pr-1 fa-fw"></i> package. Details about it are going to be announced soon.</p>
+      <p><strong>CICI</strong> is an 
+  <i class="fab fa-r-project  pr-1 fa-fw"></i> package for <strong>C</strong>ausal <strong>I</strong>nference with <strong>C</strong>ontinuous <strong>I</strong>nterventions.</p>
+<p>It facilitates estimation of counterfactual outcomes for multiple values of continuous interventions at different time points, and allows plotting of causal dose-response curves (CDRC). It can address positivity violations through weight functions.</p>
+<p>The package implements the methods described in Schomaker, McIlleron, Denti and Díaz (2023), see  
+<a href="https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/">here</a>. It can be used for non-continuous interventions too. Briefly, the paper describes two approaches: the first one is to use 
+standard parametric $g$-computation, where one intervenes on multiple values of the continuous intervention, at each time point. This approach may be complemented with diagnostics to understand the severity of positivity violations. An alternative approach 
+is to use sequential $g$-computation where outcome weights redefine the estimand in regions of low support. Note that developing $g-$formula-based approaches for continuous longitudinal interventions is an obvious suggestion because developing a standard doubly robust estimator, e.g.
+a TMLE, is not possible as the CDRC is not a pathwise-differentiable parameter; and developing non-standard doubly robust estimators is not straightforward in a multiple time-point setting.</p>
+<p>
+<a href="#gformula">$\rightarrow$ standard parametric $g$-formula</a></p>
+<p>
+<a href="#sgf">$\rightarrow$ weighted sequential $g$-formula</a></p>
+<p>
+<a href="#code">$\rightarrow$ example code</a></p>
+<h3 id="installation">Installation</h3>
+<p>The package is available on CRAN. The weighted sequential approach is currently only available on GitHub and needs to be installed seperately, but will be integrated into the main package later:</p>
+<pre><code class="language-{r}">install.packages(&quot;CICI&quot;)
+library(remotes)
+remotes::install_github(&quot;MichaelSchomaker/CICIplus&quot;)
+</code></pre>
+<p><a name="gformula"></a></p>
+<h3 id="standard-g-computation-for-continuous-interventions">Standard $g$-computation for continuous interventions</h3>
+<h4 id="standard-application">Standard application</h4>
+<p>As an example, consider the efavirenz data contained in the package. This simulated data set is similar to the real data set described in Schomaker et al. (2023; see paper on more details, including identification considerations). We are interested in what the probability of viral failure (binary outcome) at time $t$ would be
+if the concentration was $a$ mg/l for everyone ($a=0,&hellip;,10$), at each time point. If the intervention values do not change over time, we can simply specify a vector under $\texttt{abar}$ that contains the values with which we 
+want to intervene. Apart from this, only the dataset ($\texttt{X}$), time-varying confounders ($\texttt{Lnodes}$), outcome variables ($\texttt{Ynodes}$) and intervention variables ($\texttt{Anodes}$) need to be specifed. Baseline variables are detected
+automatically:</p>
+<pre><code class="language-{r}">library(CICI)
+data(EFV)
+
+# parametric g-formula
+est &lt;- gformula(X=EFV,
+                Lnodes  = c(&quot;adherence.1&quot;,&quot;weight.1&quot;,
+                            &quot;adherence.2&quot;,&quot;weight.2&quot;,
+                            &quot;adherence.3&quot;,&quot;weight.3&quot;,
+                            &quot;adherence.4&quot;,&quot;weight.4&quot;),
+                Ynodes  = c(&quot;VL.0&quot;,&quot;VL.1&quot;,&quot;VL.2&quot;,&quot;VL.3&quot;,&quot;VL.4&quot;),
+                Anodes  = c(&quot;efv.0&quot;,&quot;efv.1&quot;,&quot;efv.2&quot;,&quot;efv.3&quot;,&quot;efv.4&quot;),
+                abar=seq(0,10,1)
+)
+
+est        # print estimates
+plot(est)  # plot estimates
+</code></pre>
+<p>The $\texttt{plot}$ functionality can be used to plot the estimated counterfactual outcomes in terms of dose-response curves at different time points. In the below example, the curve at $t=5$ means that we look at $Y_5 = \text{VL}.4$ under the interventions 
+$(0,0,0,0,0),&hellip;,(10,10,10,10,10)$:</p>
+<div><img src="/img/CDRC_1.jpeg", width=100%></div>
+<p>More complex custom interventions that change over time can be specified too under $\texttt{abar}$, and they will be plotted differently; type $\texttt{?gformula}$ for details.</p>
+<h4 id="bootstrap-confidence-intervals">Bootstrap confidence intervals</h4>
+<p>To obtain bootstrap confidence intervals, simply specify the number of bootstrap samples in the option $\texttt{B}$. CI&rsquo;s can also be plotted. Examples are given in the example code listed
+
+<a href="#code">further below</a> (parallelization using the option $\texttt{ncores}$ is recommended).</p>
+<h4 id="other-estimands">Other estimands</h4>
+<p>In $\texttt{CICI}$, it is easy to estimate and plot other estimands than $E(Y^{abar})$. Simply, i) set the option $\texttt{ret=T}$ in $\texttt{gformula()}$, which saves the counterfactual datasets under the different interventions; and then, ii) apply the integrated $\texttt{custom.measure}$ function:</p>
+<pre><code class="language-{r}">custom.measure(est, fun=prop, categ=1) # P(Y^a=1) - &gt; identical results
+custom.measure(est, fun=prop, categ=0) # P(Y^a=0)
+custom.measure(est, fun=prop, categ=0, cond=&quot;sex==1&quot;) # conditional on sex=1
+
+# does not make sense here, just for illustration:
+custom.measure(est, fun=quantile, probs=0.1) # counterfactual quantiles
+</code></pre>
+<h4 id="model-specification">Model specification</h4>
+<p>The longitudinal parametric $g$-formula requires fitting of both confounder and outcome models at each time point. By default (as a starting point) GLM&rsquo;s with all variables included are used, though CICI is implemented in a more general and flexible GAM framework. The model
+families are picked by $\texttt{CICI}$ automatically and are restricted to those available within the $\texttt{mgcv}$ package to fit generalized additive models. As correct model specification is imperative for the success of $g$-formula type of approaches, variable screening and the inclusion of non-linear and interaction terms is often important. The package comes with built-in wrappers to 
+help with this. A recommended approach is to start as follows: 1) generate (strings of) all relevant model formulae with the function $\texttt{make.model.formulas}$, then 2) screen variables with LASSO using $\texttt{model.formulas.update}$ and
+then 3) pass on the updated formulae (possibly aftr furthr manual updates, see below) to $\texttt{gformula}$ using the $\texttt{Yform, Lform, Aform, Cform}$ options, as required by the estimand.</p>
+<pre><code class="language-{r}"># 1) Generic model formulas
+m &lt;- make.model.formulas(X=EFV,
+                         Lnodes  = c(&quot;adherence.1&quot;,&quot;weight.1&quot;,
+                                     &quot;adherence.2&quot;,&quot;weight.2&quot;,
+                                     &quot;adherence.3&quot;,&quot;weight.3&quot;,
+                                     &quot;adherence.4&quot;,&quot;weight.4&quot;),
+                         Ynodes  = c(&quot;VL.0&quot;,&quot;VL.1&quot;,&quot;VL.2&quot;,&quot;VL.3&quot;,&quot;VL.4&quot;),
+                         Anodes  = c(&quot;efv.0&quot;,&quot;efv.1&quot;,&quot;efv.2&quot;,&quot;efv.3&quot;,&quot;efv.4&quot;)
+)
+m$model.names # all models potentially relevant for gformula(), given *full* past
+
+# 2) Update model formulas (automated): screening with LASSO 
+glmnet.formulas &lt;-  model.formulas.update(m$model.names, EFV)
+
+# 3) use these models in gformula()
+est &lt;- gformula(...,
+                Yform=glmnet.formulas$Ynames, Lform=glmnet.formulas$Lnames,
+                ...)
+</code></pre>
+<p>Obviously, even with this approach one may have to still manually improve the models, for example by adding (penalized) splines and interactions. Examples are given at the bottom of the following help pages:
+$\texttt{?fit.updated.formulas, ?model.update}$. A future manual will give more details on possibilities of model specification.</p>
+<h4 id="multiple-imputation">Multiple imputation</h4>
+<p>CICI can deal with multiply imputed data. Currently the option MI Boot, explained in the publication 
+<a href="#bottom">further below</a> (Schomaker and Heumann, 2018), is implemented. Simply use $\texttt{gformula}$ on each imputed data set and then use the 
+$\texttt{mi.boot}$ command (custom estimands are possible too after imputation):</p>
+<pre><code class="language-{r}"># suppose the following subsets were actually multiply imputed data (M=2)
+EFV_1 &lt;- EFV[1:2500,]
+EFV_2 &lt;- EFV[2501:5000,]
+
+# first: conduct analysis on each imputed data set. Set ret=T.
+m1 &lt;- gformula(..., ret=T)
+m2 &lt;- gformula(..., ret=T)
+
+# second: combine results
+m_imp &lt;- mi.boot(list(m1,m2), mean) # uses MI rules &amp; returns 'gformula' object
+plot(m_imp)
+
+# custom estimand: evaluate probability of suppression (Y=0), among females
+m_imp2 &lt;- mi.boot(list(m1,m2), prop, categ=0, cond=&quot;sex==1&quot;)
+</code></pre>
+<h4 id="other-useful-options">Other useful options</h4>
+<p>There are many more useful option, wich are explained in $\texttt{?gformula}$:</p>
+<ul>
+<li>How to handle <strong>survival</strong> settings</li>
+<li>How to generate diagnostics</li>
+<li>How to specify both custom and natural interventions</li>
+<li><strong>Parallelization</strong> using the option $\texttt{ncores}$ (very easy!)</li>
+<li>How to track <strong>progress</strong>, even under parallelizations with $\texttt{prog}$</li>
+<li>How to reproduce results using $\texttt{seed}$</li>
+</ul>
+<p>The package can of course also handle binary and categorical interventions. Dynamic interventions are not supported.</p>
+<p><a name="sgf"></a></p>
+<h3 id="weighted-sequential-g-computation">Weighted sequential $g$-computation</h3>
+<h4 id="basic-unweighted-setup">Basic (unweighted) setup</h4>
+<p>The function $\texttt{sgf()}$ implements the sequential $g$-formula and works very similar as $\texttt{gformula()}$. The below example illustrates this. The estimated CDRC&rsquo;s are very similar.</p>
+<pre><code class="language-{r}">library(CICIplus) 
+
+# (unweighted) sequential g-formula
+est2 &lt;- sgf(X=EFV,
+            Lnodes  = c(&quot;adherence.1&quot;,&quot;weight.1&quot;,
+                        &quot;adherence.2&quot;,&quot;weight.2&quot;,
+                        &quot;adherence.3&quot;,&quot;weight.3&quot;,
+                        &quot;adherence.4&quot;,&quot;weight.4&quot;),
+            Ynodes  = c(&quot;VL.0&quot;,&quot;VL.1&quot;,&quot;VL.2&quot;,&quot;VL.3&quot;,&quot;VL.4&quot;),
+            Anodes  = c(&quot;efv.0&quot;,&quot;efv.1&quot;,&quot;efv.2&quot;,&quot;efv.3&quot;,&quot;efv.4&quot;),
+            abar=seq(0,10,1)
+)
+est2
+plot(est2)
+</code></pre>
+<h4 id="calculating-outcome-weights">Calculating outcome weights</h4>
+<p>The function $\texttt{calc.weights}$ calculates the outcome weights described in equation (12) of Schomaker et al. (2023). The setup is simple: i) define variables as confounders, outcomes, interventions or censoring indicators; 
+ii) choose a method for conditional density estimation, iii) specify one or many values for $c$, to specify how low support regions are defined:</p>
+<pre><code class="language-{r}"># Step 1: calculate weights (add baseline variables to Lnodes)
+# a) parametric density based
+w &lt;- calc.weights(X=EFV, 
+                         Lnodes  = c(&quot;sex&quot;, &quot;metabolic&quot;, &quot;log_age&quot;,
+                                     &quot;NRTI&quot; ,&quot;weight.0&quot;,
+                                     &quot;adherence.1&quot;,&quot;weight.1&quot;,
+                                     &quot;adherence.2&quot;,&quot;weight.2&quot;,
+                                     &quot;adherence.3&quot;,&quot;weight.3&quot;,
+                                     &quot;adherence.4&quot;,&quot;weight.4&quot;),
+                         Ynodes  = c(&quot;VL.0&quot;,&quot;VL.1&quot;,&quot;VL.2&quot;,&quot;VL.3&quot;,&quot;VL.4&quot;),
+                         Anodes  = c(&quot;efv.0&quot;,&quot;efv.1&quot;,&quot;efv.2&quot;,&quot;efv.3&quot;,&quot;efv.4&quot;),
+                         d.method=&quot;binning&quot;, abar=seq(0,10,1),
+                         c=c(0.01,0.001)
+)
+summary(w) # weight summary
+# d.method alternatives: parametric density estimation or highly-adaptive LASSO based
+# check ?calc.weights for details
+</code></pre>
+<h4 id="weighted-sequential-g-formula">Weighted sequential $g$-formula</h4>
+<p>We can now use the calculated weights in the sequential $g$-formula by using the $\texttt{Yweights}$ option. The estimation algorithm is listed in Table 1 of Schomaker et al. (2023):</p>
+<pre><code class="language-{r}"># Step 2: sequential g-formula with outcome weights
+est3 &lt;- sgf(X=EFV,
+              Lnodes  = c(&quot;adherence.1&quot;,&quot;weight.1&quot;,
+                          &quot;adherence.2&quot;,&quot;weight.2&quot;,
+                          &quot;adherence.3&quot;,&quot;weight.3&quot;,
+                          &quot;adherence.4&quot;,&quot;weight.4&quot;),
+              Ynodes  = c(&quot;VL.0&quot;,&quot;VL.1&quot;,&quot;VL.2&quot;,&quot;VL.3&quot;,&quot;VL.4&quot;),
+              Anodes  = c(&quot;efv.0&quot;,&quot;efv.1&quot;,&quot;efv.2&quot;,&quot;efv.3&quot;,&quot;efv.4&quot;),
+              Yweights = w$`0.01`,
+              abar=seq(0,10,1)
+)
+</code></pre>
+<h4 id="super-learning">Super Learning</h4>
+<p>The sequential $g$-formula needs models for the iterated nested conditional outcomes. In the case of binary outcome variables (and more than 1 time point) this equates to modeling proportional data as of the second iteration step.
+Using a data-adaptive approach, with super learning, is thus a good option. Candidate learners, and screening algorithms, can be easily passed on to the $\texttt{SuperLearner}$ package. Note that user-written learners (as in the example below)
+need to be listed in the option $\texttt{SL.export}$ if parallelization is used (thanks to Eric Polley for helping me here!).</p>
+<pre><code class="language-{r}"># Realistic setup
+# (requires user-written learners which are available upon request)
+
+library(SuperLearner) 
+est5 &lt;- sgf(X=EFV,
+            Lnodes  = c(&quot;adherence.1&quot;,&quot;weight.1&quot;,
+                        &quot;adherence.2&quot;,&quot;weight.2&quot;,
+                        &quot;adherence.3&quot;,&quot;weight.3&quot;,
+                        &quot;adherence.4&quot;,&quot;weight.4&quot;),
+            Ynodes  = c(&quot;VL.0&quot;,&quot;VL.1&quot;,&quot;VL.2&quot;,&quot;VL.3&quot;,&quot;VL.4&quot;),
+            Anodes  = c(&quot;efv.0&quot;,&quot;efv.1&quot;,&quot;efv.2&quot;,&quot;efv.3&quot;,&quot;efv.4&quot;),
+            Yweights = w$`0.01`,
+            SL.library = list(c(&quot;SL.glm&quot;,&quot;screen.glmnet_nVar_1_4_10_150&quot;),
+                              c(&quot;SL.mgcv_base&quot;, &quot;screen.cramersv_3&quot;)),
+            SL.export = c(&quot;SL.mgcv_base&quot;,&quot;screen.glmnet_nVar_base&quot;,
+                          &quot;screen.cramersv_base&quot;,&quot;predict.SL.mgcv&quot;),
+            abar=seq(0,10,1), B=200, ncores=7, seed=41188, prog=&quot;C:/temp&quot;,
+            cvControl = list(V=2), # SL option
+            calc.support=TRUE
+)
+est5                                    # estimates
+est5$SL.weights                         # Super Learner summary
+plot(est5, time.points = c(1,5), CI=T)  # plot with CIs
+</code></pre>
+<h4 id="further-options">Further options</h4>
+<p>The weighted sequential $g$-formula approach can also handle survival settings. There are many important subtleties related to the estimation of the conditional densities needed to calculate the outcome weights. It is possible
+to customize density estimation with the highly-adaptive LASSO, and pass on many useful options; details will be described in the future manual.</p>
+<h3 id="comparison">Comparison</h3>
+<p>As a comparsion between the standard and weighted approach have a look at the below figure: in areas of low support (close to 0), the weighted curve is different, but otherwise similar. Details about the interpretation of the weighted curve
+can be found at the bottom of Section 3.2.2 in the paper.</p>
+<div><img src="/img/CICI_white.jpeg", width=100%></div>
+<h3 id="code">Code</h3>
+<p><a name="code"></a></p>
+<p>The code of this little tutorial is available <a href="/R/example_homepage.R" target="_blank">here</a>.</p>
+<p><a name="bottom"></a></p>
 
     </div>
 
@@ -690,6 +898,12 @@
 <div class="article-tags">
   
   <a class="badge badge-light" href="/tags/software/">software</a>
+  
+  <a class="badge badge-light" href="/tags/g-formula/">g-formula</a>
+  
+  <a class="badge badge-light" href="/tags/causal-inference/">causal inference</a>
+  
+  <a class="badge badge-light" href="/tags/continuous-interventions/">continuous interventions</a>
   
 </div>
 
@@ -797,7 +1011,15 @@
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/project/sae/">SAE</a></li>
+      <li><a href="/publication/2017-01-01_optimal_timing_of_an/">Optimal timing of antiretroviral treatment initiation in HIV-positive children and adolescents: a multiregional analysis from Southern Africa, West Africa and Europe</a></li>
+      
+      <li><a href="/publication/2016-01-01_growth_and_mortality/">Growth and Mortality Outcomes for Different Antiretroviral Therapy Initiation Criteria in Children aged 1-5 Years:  A Causal Modelling Analysis from West and Southern Africa</a></li>
+      
+      <li><a href="/publication/2013-01-01_when_to_start_antire/">When to start antiretroviral therapy in children aged 2-5 years: a collaborative causal modelling analysis of cohort studies from southern Africa</a></li>
+      
+      <li><a href="/publication/2022-12-21_causal_evidence/">Causal evidence in health decision making: methodological approaches of causal inference and health decision science</a></li>
+      
+      <li><a href="/publication/2021-03-01_estimating_the_effect/">Estimating the Effect of Central Bank Independence on Inflation Using Longitudinal Targeted Maximum Likelihood Estimation</a></li>
       
     </ul>
   </div>
@@ -815,6 +1037,248 @@
 
       
       
+      
+        <h2>Publications</h2>
+        
+          
+            
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/publication/2023-05-12_continuous_intervention/" >Causal Inference for Continuous Multiple Time Point Interventions</a>
+    </h3>
+
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  
+  <span><a>M. Schomaker</a></span>, <span><a>H. McIlleron</a></span>, <span><a>P. Denti</a></span>, <span><a>I. Dìaz</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/abs/2305.06645" target="_blank" rel="noopener">
+  Preprint
+</a>
+
+
+
+
+  
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/2023-05-12_continuous_intervention/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/project/cici/">
+    Project
+  </a>
+  
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/pdf/Presentation_Schomaker_EuroCIM_2023.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+          
+        
+          
+            
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/publication/2018-01-01_bootstrap_inference_/" >Bootstrap inference when using multiple imputation</a>
+    </h3>
+
+    
+    <div class="article-style">
+      For many analyses, it is common to use both bootstrapping and multiple imputation (MI): MI to address missing data and bootstrapping to obtain standard errors. For example, when using the g-formula in causal inference, bootstrapping is required to obtain standard errors; however, the data may be multiply imputed due to missing (baseline) data in the population of interest.
+    </div>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  
+  <span><a>M. Schomaker</a></span>, <span><a>C. Heumann</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/pdf/Preprint_Bootstrap_Schomaker_2018.pdf" target="_blank" rel="noopener">
+  Preprint
+</a>
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.7654" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+        data-filename="/publication/2018-01-01_bootstrap_inference_/cite.bib">
+  Cite
+</button>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/zip/Code_Paper_Bootstrap_Imputation.zip" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/project/cici/">
+    Project
+  </a>
+  
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/publication/2018-01-01_bootstrap_inference_/" >
+      <img src="/publication/2018-01-01_bootstrap_inference_/featured_hu2d598ae295d090bbf79a809ce5c17186_167025_150x0_resize_q90_lanczos.jpg" alt="">
+    </a>
+    
+  </div>
+</div>
+
+          
+        
       
 
       

@@ -5,7 +5,7 @@
     <link>https://MichaelSchomaker.github.io/tags/software/</link>
       <atom:link href="https://MichaelSchomaker.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
     <description>software</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
       <title>software</title>
@@ -113,10 +113,218 @@ and is popular in causal inference. See Section 6.3. of the &lt;a href=&#34;http
     <item>
       <title>CICI</title>
       <link>https://MichaelSchomaker.github.io/project/cici/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://MichaelSchomaker.github.io/project/cici/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;CICI&lt;/strong&gt; is a new 
-  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; package. Details about it are going to be announced soon.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;CICI&lt;/strong&gt; is an 
+  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; package for &lt;strong&gt;C&lt;/strong&gt;ausal &lt;strong&gt;I&lt;/strong&gt;nference with &lt;strong&gt;C&lt;/strong&gt;ontinuous &lt;strong&gt;I&lt;/strong&gt;nterventions.&lt;/p&gt;
+&lt;p&gt;It facilitates estimation of counterfactual outcomes for multiple values of continuous interventions at different time points, and allows plotting of causal dose-response curves (CDRC). It can address positivity violations through weight functions.&lt;/p&gt;
+&lt;p&gt;The package implements the methods described in Schomaker, McIlleron, Denti and Díaz (2023), see  
+&lt;a href=&#34;https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/&#34;&gt;here&lt;/a&gt;. It can be used for non-continuous interventions too. Briefly, the paper describes two approaches: the first one is to use 
+standard parametric $g$-computation, where one intervenes on multiple values of the continuous intervention, at each time point. This approach may be complemented with diagnostics to understand the severity of positivity violations. An alternative approach 
+is to use sequential $g$-computation where outcome weights redefine the estimand in regions of low support. Note that developing $g-$formula-based approaches for continuous longitudinal interventions is an obvious suggestion because developing a standard doubly robust estimator, e.g.
+a TMLE, is not possible as the CDRC is not a pathwise-differentiable parameter; and developing non-standard doubly robust estimators is not straightforward in a multiple time-point setting.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#gformula&#34;&gt;$\rightarrow$ standard parametric $g$-formula&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#sgf&#34;&gt;$\rightarrow$ weighted sequential $g$-formula&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;#code&#34;&gt;$\rightarrow$ example code&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+&lt;p&gt;The package is available on CRAN. The weighted sequential approach is currently only available on GitHub and needs to be installed seperately, but will be integrated into the main package later:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;install.packages(&amp;quot;CICI&amp;quot;)
+library(remotes)
+remotes::install_github(&amp;quot;MichaelSchomaker/CICIplus&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a name=&#34;gformula&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;standard-g-computation-for-continuous-interventions&#34;&gt;Standard $g$-computation for continuous interventions&lt;/h3&gt;
+&lt;h4 id=&#34;standard-application&#34;&gt;Standard application&lt;/h4&gt;
+&lt;p&gt;As an example, consider the efavirenz data contained in the package. This simulated data set is similar to the real data set described in Schomaker et al. (2023; see paper on more details, including identification considerations). We are interested in what the probability of viral failure (binary outcome) at time $t$ would be
+if the concentration was $a$ mg/l for everyone ($a=0,&amp;hellip;,10$), at each time point. If the intervention values do not change over time, we can simply specify a vector under $\texttt{abar}$ that contains the values with which we 
+want to intervene. Apart from this, only the dataset ($\texttt{X}$), time-varying confounders ($\texttt{Lnodes}$), outcome variables ($\texttt{Ynodes}$) and intervention variables ($\texttt{Anodes}$) need to be specifed. Baseline variables are detected
+automatically:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;library(CICI)
+data(EFV)
+
+# parametric g-formula
+est &amp;lt;- gformula(X=EFV,
+                Lnodes  = c(&amp;quot;adherence.1&amp;quot;,&amp;quot;weight.1&amp;quot;,
+                            &amp;quot;adherence.2&amp;quot;,&amp;quot;weight.2&amp;quot;,
+                            &amp;quot;adherence.3&amp;quot;,&amp;quot;weight.3&amp;quot;,
+                            &amp;quot;adherence.4&amp;quot;,&amp;quot;weight.4&amp;quot;),
+                Ynodes  = c(&amp;quot;VL.0&amp;quot;,&amp;quot;VL.1&amp;quot;,&amp;quot;VL.2&amp;quot;,&amp;quot;VL.3&amp;quot;,&amp;quot;VL.4&amp;quot;),
+                Anodes  = c(&amp;quot;efv.0&amp;quot;,&amp;quot;efv.1&amp;quot;,&amp;quot;efv.2&amp;quot;,&amp;quot;efv.3&amp;quot;,&amp;quot;efv.4&amp;quot;),
+                abar=seq(0,10,1)
+)
+
+est        # print estimates
+plot(est)  # plot estimates
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The $\texttt{plot}$ functionality can be used to plot the estimated counterfactual outcomes in terms of dose-response curves at different time points. In the below example, the curve at $t=5$ means that we look at $Y_5 = \text{VL}.4$ under the interventions 
+$(0,0,0,0,0),&amp;hellip;,(10,10,10,10,10)$:&lt;/p&gt;
+&lt;div&gt;&lt;img src=&#34;https://MichaelSchomaker.github.io/img/CDRC_1.jpeg&#34;, width=100%&gt;&lt;/div&gt;
+&lt;p&gt;More complex custom interventions that change over time can be specified too under $\texttt{abar}$, and they will be plotted differently; type $\texttt{?gformula}$ for details.&lt;/p&gt;
+&lt;h4 id=&#34;bootstrap-confidence-intervals&#34;&gt;Bootstrap confidence intervals&lt;/h4&gt;
+&lt;p&gt;To obtain bootstrap confidence intervals, simply specify the number of bootstrap samples in the option $\texttt{B}$. CI&amp;rsquo;s can also be plotted. Examples are given in the example code listed
+
+&lt;a href=&#34;#code&#34;&gt;further below&lt;/a&gt; (parallelization using the option $\texttt{ncores}$ is recommended).&lt;/p&gt;
+&lt;h4 id=&#34;other-estimands&#34;&gt;Other estimands&lt;/h4&gt;
+&lt;p&gt;In $\texttt{CICI}$, it is easy to estimate and plot other estimands than $E(Y^{abar})$. Simply, i) set the option $\texttt{ret=T}$ in $\texttt{gformula()}$, which saves the counterfactual datasets under the different interventions; and then, ii) apply the integrated $\texttt{custom.measure}$ function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;custom.measure(est, fun=prop, categ=1) # P(Y^a=1) - &amp;gt; identical results
+custom.measure(est, fun=prop, categ=0) # P(Y^a=0)
+custom.measure(est, fun=prop, categ=0, cond=&amp;quot;sex==1&amp;quot;) # conditional on sex=1
+
+# does not make sense here, just for illustration:
+custom.measure(est, fun=quantile, probs=0.1) # counterfactual quantiles
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;model-specification&#34;&gt;Model specification&lt;/h4&gt;
+&lt;p&gt;The longitudinal parametric $g$-formula requires fitting of both confounder and outcome models at each time point. By default (as a starting point) GLM&amp;rsquo;s with all variables included are used, though CICI is implemented in a more general and flexible GAM framework. The model
+families are picked by $\texttt{CICI}$ automatically and are restricted to those available within the $\texttt{mgcv}$ package to fit generalized additive models. As correct model specification is imperative for the success of $g$-formula type of approaches, variable screening and the inclusion of non-linear and interaction terms is often important. The package comes with built-in wrappers to 
+help with this. A recommended approach is to start as follows: 1) generate (strings of) all relevant model formulae with the function $\texttt{make.model.formulas}$, then 2) screen variables with LASSO using $\texttt{model.formulas.update}$ and
+then 3) pass on the updated formulae (possibly aftr furthr manual updates, see below) to $\texttt{gformula}$ using the $\texttt{Yform, Lform, Aform, Cform}$ options, as required by the estimand.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# 1) Generic model formulas
+m &amp;lt;- make.model.formulas(X=EFV,
+                         Lnodes  = c(&amp;quot;adherence.1&amp;quot;,&amp;quot;weight.1&amp;quot;,
+                                     &amp;quot;adherence.2&amp;quot;,&amp;quot;weight.2&amp;quot;,
+                                     &amp;quot;adherence.3&amp;quot;,&amp;quot;weight.3&amp;quot;,
+                                     &amp;quot;adherence.4&amp;quot;,&amp;quot;weight.4&amp;quot;),
+                         Ynodes  = c(&amp;quot;VL.0&amp;quot;,&amp;quot;VL.1&amp;quot;,&amp;quot;VL.2&amp;quot;,&amp;quot;VL.3&amp;quot;,&amp;quot;VL.4&amp;quot;),
+                         Anodes  = c(&amp;quot;efv.0&amp;quot;,&amp;quot;efv.1&amp;quot;,&amp;quot;efv.2&amp;quot;,&amp;quot;efv.3&amp;quot;,&amp;quot;efv.4&amp;quot;)
+)
+m$model.names # all models potentially relevant for gformula(), given *full* past
+
+# 2) Update model formulas (automated): screening with LASSO 
+glmnet.formulas &amp;lt;-  model.formulas.update(m$model.names, EFV)
+
+# 3) use these models in gformula()
+est &amp;lt;- gformula(...,
+                Yform=glmnet.formulas$Ynames, Lform=glmnet.formulas$Lnames,
+                ...)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Obviously, even with this approach one may have to still manually improve the models, for example by adding (penalized) splines and interactions. Examples are given at the bottom of the following help pages:
+$\texttt{?fit.updated.formulas, ?model.update}$. A future manual will give more details on possibilities of model specification.&lt;/p&gt;
+&lt;h4 id=&#34;multiple-imputation&#34;&gt;Multiple imputation&lt;/h4&gt;
+&lt;p&gt;CICI can deal with multiply imputed data. Currently the option MI Boot, explained in the publication 
+&lt;a href=&#34;#bottom&#34;&gt;further below&lt;/a&gt; (Schomaker and Heumann, 2018), is implemented. Simply use $\texttt{gformula}$ on each imputed data set and then use the 
+$\texttt{mi.boot}$ command (custom estimands are possible too after imputation):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# suppose the following subsets were actually multiply imputed data (M=2)
+EFV_1 &amp;lt;- EFV[1:2500,]
+EFV_2 &amp;lt;- EFV[2501:5000,]
+
+# first: conduct analysis on each imputed data set. Set ret=T.
+m1 &amp;lt;- gformula(..., ret=T)
+m2 &amp;lt;- gformula(..., ret=T)
+
+# second: combine results
+m_imp &amp;lt;- mi.boot(list(m1,m2), mean) # uses MI rules &amp;amp; returns &#39;gformula&#39; object
+plot(m_imp)
+
+# custom estimand: evaluate probability of suppression (Y=0), among females
+m_imp2 &amp;lt;- mi.boot(list(m1,m2), prop, categ=0, cond=&amp;quot;sex==1&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;other-useful-options&#34;&gt;Other useful options&lt;/h4&gt;
+&lt;p&gt;There are many more useful option, wich are explained in $\texttt{?gformula}$:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How to handle &lt;strong&gt;survival&lt;/strong&gt; settings&lt;/li&gt;
+&lt;li&gt;How to generate diagnostics&lt;/li&gt;
+&lt;li&gt;How to specify both custom and natural interventions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parallelization&lt;/strong&gt; using the option $\texttt{ncores}$ (very easy!)&lt;/li&gt;
+&lt;li&gt;How to track &lt;strong&gt;progress&lt;/strong&gt;, even under parallelizations with $\texttt{prog}$&lt;/li&gt;
+&lt;li&gt;How to reproduce results using $\texttt{seed}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The package can of course also handle binary and categorical interventions. Dynamic interventions are not supported.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;sgf&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;weighted-sequential-g-computation&#34;&gt;Weighted sequential $g$-computation&lt;/h3&gt;
+&lt;h4 id=&#34;basic-unweighted-setup&#34;&gt;Basic (unweighted) setup&lt;/h4&gt;
+&lt;p&gt;The function $\texttt{sgf()}$ implements the sequential $g$-formula and works very similar as $\texttt{gformula()}$. The below example illustrates this. The estimated CDRC&amp;rsquo;s are very similar.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;library(CICIplus) 
+
+# (unweighted) sequential g-formula
+est2 &amp;lt;- sgf(X=EFV,
+            Lnodes  = c(&amp;quot;adherence.1&amp;quot;,&amp;quot;weight.1&amp;quot;,
+                        &amp;quot;adherence.2&amp;quot;,&amp;quot;weight.2&amp;quot;,
+                        &amp;quot;adherence.3&amp;quot;,&amp;quot;weight.3&amp;quot;,
+                        &amp;quot;adherence.4&amp;quot;,&amp;quot;weight.4&amp;quot;),
+            Ynodes  = c(&amp;quot;VL.0&amp;quot;,&amp;quot;VL.1&amp;quot;,&amp;quot;VL.2&amp;quot;,&amp;quot;VL.3&amp;quot;,&amp;quot;VL.4&amp;quot;),
+            Anodes  = c(&amp;quot;efv.0&amp;quot;,&amp;quot;efv.1&amp;quot;,&amp;quot;efv.2&amp;quot;,&amp;quot;efv.3&amp;quot;,&amp;quot;efv.4&amp;quot;),
+            abar=seq(0,10,1)
+)
+est2
+plot(est2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;calculating-outcome-weights&#34;&gt;Calculating outcome weights&lt;/h4&gt;
+&lt;p&gt;The function $\texttt{calc.weights}$ calculates the outcome weights described in equation (12) of Schomaker et al. (2023). The setup is simple: i) define variables as confounders, outcomes, interventions or censoring indicators; 
+ii) choose a method for conditional density estimation, iii) specify one or many values for $c$, to specify how low support regions are defined:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# Step 1: calculate weights (add baseline variables to Lnodes)
+# a) parametric density based
+w &amp;lt;- calc.weights(X=EFV, 
+                         Lnodes  = c(&amp;quot;sex&amp;quot;, &amp;quot;metabolic&amp;quot;, &amp;quot;log_age&amp;quot;,
+                                     &amp;quot;NRTI&amp;quot; ,&amp;quot;weight.0&amp;quot;,
+                                     &amp;quot;adherence.1&amp;quot;,&amp;quot;weight.1&amp;quot;,
+                                     &amp;quot;adherence.2&amp;quot;,&amp;quot;weight.2&amp;quot;,
+                                     &amp;quot;adherence.3&amp;quot;,&amp;quot;weight.3&amp;quot;,
+                                     &amp;quot;adherence.4&amp;quot;,&amp;quot;weight.4&amp;quot;),
+                         Ynodes  = c(&amp;quot;VL.0&amp;quot;,&amp;quot;VL.1&amp;quot;,&amp;quot;VL.2&amp;quot;,&amp;quot;VL.3&amp;quot;,&amp;quot;VL.4&amp;quot;),
+                         Anodes  = c(&amp;quot;efv.0&amp;quot;,&amp;quot;efv.1&amp;quot;,&amp;quot;efv.2&amp;quot;,&amp;quot;efv.3&amp;quot;,&amp;quot;efv.4&amp;quot;),
+                         d.method=&amp;quot;binning&amp;quot;, abar=seq(0,10,1),
+                         c=c(0.01,0.001)
+)
+summary(w) # weight summary
+# d.method alternatives: parametric density estimation or highly-adaptive LASSO based
+# check ?calc.weights for details
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;weighted-sequential-g-formula&#34;&gt;Weighted sequential $g$-formula&lt;/h4&gt;
+&lt;p&gt;We can now use the calculated weights in the sequential $g$-formula by using the $\texttt{Yweights}$ option. The estimation algorithm is listed in Table 1 of Schomaker et al. (2023):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# Step 2: sequential g-formula with outcome weights
+est3 &amp;lt;- sgf(X=EFV,
+              Lnodes  = c(&amp;quot;adherence.1&amp;quot;,&amp;quot;weight.1&amp;quot;,
+                          &amp;quot;adherence.2&amp;quot;,&amp;quot;weight.2&amp;quot;,
+                          &amp;quot;adherence.3&amp;quot;,&amp;quot;weight.3&amp;quot;,
+                          &amp;quot;adherence.4&amp;quot;,&amp;quot;weight.4&amp;quot;),
+              Ynodes  = c(&amp;quot;VL.0&amp;quot;,&amp;quot;VL.1&amp;quot;,&amp;quot;VL.2&amp;quot;,&amp;quot;VL.3&amp;quot;,&amp;quot;VL.4&amp;quot;),
+              Anodes  = c(&amp;quot;efv.0&amp;quot;,&amp;quot;efv.1&amp;quot;,&amp;quot;efv.2&amp;quot;,&amp;quot;efv.3&amp;quot;,&amp;quot;efv.4&amp;quot;),
+              Yweights = w$`0.01`,
+              abar=seq(0,10,1)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;super-learning&#34;&gt;Super Learning&lt;/h4&gt;
+&lt;p&gt;The sequential $g$-formula needs models for the iterated nested conditional outcomes. In the case of binary outcome variables (and more than 1 time point) this equates to modeling proportional data as of the second iteration step.
+Using a data-adaptive approach, with super learning, is thus a good option. Candidate learners, and screening algorithms, can be easily passed on to the $\texttt{SuperLearner}$ package. Note that user-written learners (as in the example below)
+need to be listed in the option $\texttt{SL.export}$ if parallelization is used (thanks to Eric Polley for helping me here!).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# Realistic setup
+# (requires user-written learners which are available upon request)
+
+library(SuperLearner) 
+est5 &amp;lt;- sgf(X=EFV,
+            Lnodes  = c(&amp;quot;adherence.1&amp;quot;,&amp;quot;weight.1&amp;quot;,
+                        &amp;quot;adherence.2&amp;quot;,&amp;quot;weight.2&amp;quot;,
+                        &amp;quot;adherence.3&amp;quot;,&amp;quot;weight.3&amp;quot;,
+                        &amp;quot;adherence.4&amp;quot;,&amp;quot;weight.4&amp;quot;),
+            Ynodes  = c(&amp;quot;VL.0&amp;quot;,&amp;quot;VL.1&amp;quot;,&amp;quot;VL.2&amp;quot;,&amp;quot;VL.3&amp;quot;,&amp;quot;VL.4&amp;quot;),
+            Anodes  = c(&amp;quot;efv.0&amp;quot;,&amp;quot;efv.1&amp;quot;,&amp;quot;efv.2&amp;quot;,&amp;quot;efv.3&amp;quot;,&amp;quot;efv.4&amp;quot;),
+            Yweights = w$`0.01`,
+            SL.library = list(c(&amp;quot;SL.glm&amp;quot;,&amp;quot;screen.glmnet_nVar_1_4_10_150&amp;quot;),
+                              c(&amp;quot;SL.mgcv_base&amp;quot;, &amp;quot;screen.cramersv_3&amp;quot;)),
+            SL.export = c(&amp;quot;SL.mgcv_base&amp;quot;,&amp;quot;screen.glmnet_nVar_base&amp;quot;,
+                          &amp;quot;screen.cramersv_base&amp;quot;,&amp;quot;predict.SL.mgcv&amp;quot;),
+            abar=seq(0,10,1), B=200, ncores=7, seed=41188, prog=&amp;quot;C:/temp&amp;quot;,
+            cvControl = list(V=2), # SL option
+            calc.support=TRUE
+)
+est5                                    # estimates
+est5$SL.weights                         # Super Learner summary
+plot(est5, time.points = c(1,5), CI=T)  # plot with CIs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;further-options&#34;&gt;Further options&lt;/h4&gt;
+&lt;p&gt;The weighted sequential $g$-formula approach can also handle survival settings. There are many important subtleties related to the estimation of the conditional densities needed to calculate the outcome weights. It is possible
+to customize density estimation with the highly-adaptive LASSO, and pass on many useful options; details will be described in the future manual.&lt;/p&gt;
+&lt;h3 id=&#34;comparison&#34;&gt;Comparison&lt;/h3&gt;
+&lt;p&gt;As a comparsion between the standard and weighted approach have a look at the below figure: in areas of low support (close to 0), the weighted curve is different, but otherwise similar. Details about the interpretation of the weighted curve
+can be found at the bottom of Section 3.2.2 in the paper.&lt;/p&gt;
+&lt;div&gt;&lt;img src=&#34;https://MichaelSchomaker.github.io/img/CICI_white.jpeg&#34;, width=100%&gt;&lt;/div&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;p&gt;&lt;a name=&#34;code&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The code of this little tutorial is available &lt;a href=&#34;https://MichaelSchomaker.github.io/R/example_homepage.R&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;bottom&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
