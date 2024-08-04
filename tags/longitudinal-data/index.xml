@@ -5,12 +5,20 @@
     <link>https://MichaelSchomaker.github.io/tags/longitudinal-data/</link>
       <atom:link href="https://MichaelSchomaker.github.io/tags/longitudinal-data/index.xml" rel="self" type="application/rss+xml" />
     <description>longitudinal data</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 29 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
       <title>longitudinal data</title>
       <link>https://MichaelSchomaker.github.io/tags/longitudinal-data/</link>
     </image>
+    
+    <item>
+      <title>Causal Inference for Continuous Multiple Time Point Interventions</title>
+      <link>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Recoverability of Causal Effects in a Longitudinal Study under Presence of Missing Data</title>
@@ -25,14 +33,6 @@
       <link>https://MichaelSchomaker.github.io/publication/2024_02_05_post_traumatic_stress/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
       <guid>https://MichaelSchomaker.github.io/publication/2024_02_05_post_traumatic_stress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Causal Inference for Continuous Multiple Time Point Interventions</title>
-      <link>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</link>
-      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</guid>
       <description></description>
     </item>
     

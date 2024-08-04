@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Schomaker</title>
+    <link>http://localhost:1313/authors/authors/</link>
+      <atom:link href="http://localhost:1313/authors/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Michael Schomaker</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>http://localhost:1313/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>Michael Schomaker</title>
+      <link>http://localhost:1313/authors/authors/</link>
+    </image>
+    
+  </channel>
+</rss>
