@@ -5,7 +5,7 @@
     <link>https://MichaelSchomaker.github.io/tags/g-formula/</link>
       <atom:link href="https://MichaelSchomaker.github.io/tags/g-formula/index.xml" rel="self" type="application/rss+xml" />
     <description>g-formula</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
       <title>g-formula</title>
@@ -228,6 +228,14 @@ can be found at the bottom of Section 3.2.2 in the paper.&lt;/p&gt;
 &lt;p&gt;The code of this little tutorial is available &lt;a href=&#34;https://MichaelSchomaker.github.io/R/example_homepage.R&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a name=&#34;bottom&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Determining Targets for Antiretroviral Drug Concentrations: a Causal Framework Illustrated with Pediatric Efavirenz Data from the CHAPAS-3 Trial</title>
+      <link>https://MichaelSchomaker.github.io/publication/2024_12_03_determining_targets/</link>
+      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2024_12_03_determining_targets/</guid>
+      <description></description>
     </item>
     
     <item>

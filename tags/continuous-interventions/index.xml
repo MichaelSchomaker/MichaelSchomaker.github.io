@@ -5,7 +5,7 @@
     <link>https://MichaelSchomaker.github.io/tags/continuous-interventions/</link>
       <atom:link href="https://MichaelSchomaker.github.io/tags/continuous-interventions/index.xml" rel="self" type="application/rss+xml" />
     <description>continuous interventions</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
       <title>continuous interventions</title>
@@ -233,16 +233,24 @@ can be found at the bottom of Section 3.2.2 in the paper.&lt;/p&gt;
     <item>
       <title>Causal Inference for Continuous Multiple Time Point Interventions</title>
       <link>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</link>
-      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://MichaelSchomaker.github.io/publication/2023-05-12_continuous_intervention/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Recoverability of Causal Effects in a Longitudinal Study under Presence of Missing Data</title>
-      <link>https://MichaelSchomaker.github.io/publication/2025_03_05_recoverability_of_causal/</link>
-      <pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://MichaelSchomaker.github.io/publication/2025_03_05_recoverability_of_causal/</guid>
+      <title>Determining Targets for Antiretroviral Drug Concentrations: a Causal Framework Illustrated with Pediatric Efavirenz Data from the CHAPAS-3 Trial</title>
+      <link>https://MichaelSchomaker.github.io/publication/2024_12_03_determining_targets/</link>
+      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2024_12_03_determining_targets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recoverability of Causal Effects under Presence of Missing Data: a Longitudinal Case Study</title>
+      <link>https://MichaelSchomaker.github.io/publication/2024_11_18_recoverability_of_causal/</link>
+      <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2024_11_18_recoverability_of_causal/</guid>
       <description></description>
     </item>
     

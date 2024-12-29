@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clinical care | Michael Schomaker</title>
+    <link>https://MichaelSchomaker.github.io/tags/clinical-care/</link>
+      <atom:link href="https://MichaelSchomaker.github.io/tags/clinical-care/index.xml" rel="self" type="application/rss+xml" />
+    <description>clinical care</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://MichaelSchomaker.github.io/images/icon_hue888863bcf6448bbe1c2d7b1880687e8_12435_512x512_fill_lanczos_center_3.png</url>
+      <title>clinical care</title>
+      <link>https://MichaelSchomaker.github.io/tags/clinical-care/</link>
+    </image>
+    
+    <item>
+      <title>Implementation of a comprehensive clinical risk management system in a university hospital</title>
+      <link>https://MichaelSchomaker.github.io/publication/2024_03_01_implementation/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://MichaelSchomaker.github.io/publication/2024_03_01_implementation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
